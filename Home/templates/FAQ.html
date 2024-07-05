@@ -1,0 +1,165 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+
+{% block mainbody %}
+
+<div class="columns is-centered is-mobile mt-5 pt-5 mb-5 pb-5">
+
+    <div
+            class="column is-half-fullhd is-three-quarters-tablet is-full-mobile is-justify-content-center">
+
+        <div id="imageContainer" class="has-text-centered ">
+            <img src="{% static 'AdobeStock_537400208.png' %}" width="500">
+        </div>
+
+        <div id="whatDoesAWebsiteCost"
+             class="p-5 ml-5 pl-5">
+            <h1 class="title has-text-white has-text-weight-bold mt-5" style="font-family:
+                Charter;">
+                How Much Does A Website Cost?</h1>
+            <p class="text has-text-white has-text-weight-bold">There are many factors
+                that are considered when calculating the cost of a website such as:</p>
+            <ul style="display: list-item;" class="ml-5 pl-5 has-text-weight-bold">
+                <li>How many pages you plan to implement to your website.</li>
+                <li>The features and services you would like to implement on your
+                    website.
+                </li>
+                <li>The branding work that would need to be done on your website.</li>
+                <li>The amount of traffic you expect to generate on your website.</li>
+            </ul>
+
+
+            <p class="text has-text-white has-text-weight-bold pt-5 mt-5">Some of the
+                post-launch
+                (per-monthly)
+                expenses you can expect would include: </p>
+            <ul style="display: list-item;" class="ml-5 pl-5 has-text-weight-bold">
+                <li>Per-month hosting operation cost via AWS.</li>
+                <li>SEO Research & Branding</li>
+            </ul>
+
+        </div>
+
+        <div id="button_container" class="has-text-centered mb-5">
+            <a class="button is-medium has-text-white p-5
+                has-text-weight-bold"
+               href="{% url 'Home:contact_me' %}" style="background-color:
+                #BAA651; border: none; font-family: Charter;">
+                Let's Talk!
+            </a>
+        </div>
+
+
+        <div id="ourProcess" class="p-5 ml-5 pl-5">
+            <h1 class="title has-text-white">What Does Our Process Entail?</h1>
+        </div>
+
+        <div class="step" class="p-5 ml-5 pl-5">
+            <div class="columns">
+
+                <div class="column is-one-quarter has-text-centered mt-4 ml-3">
+                    <img src="{% static 'icons8-consultation-50.png' %}">
+                </div>
+
+                <div class="column p-5 ml-5 pl-5">
+                    <p class="text has-text-white is-size-5 has-text-weight-bold">1.
+                        Initial Consultation</p>
+                    <p class="text has-text-white pl-2">Through our initial consultation,
+                        we
+                        take our time to get to know your and your business. We analyze
+                        your needs and present you a project scope and initial price.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" class="p-5 ml-5 pl-5 mt-5">
+            <div class="columns">
+
+                <div class="column is-one-quarter has-text-centered mt-4 ml-3">
+                    <img src="{% static 'prototype.png' %}" width="65" height="65">
+                </div>
+
+                <div class="column p-5 ml-5 pl-5">
+                    <p class="text has-text-white is-size-5 has-text-weight-bold">2.
+                        Design Prototypes</p>
+                    <p class="text has-text-white pl-2">During this phase of the project we
+                        present you with our design prototypes, you tell us what you like,
+                        what you don't like and what changes you want made to the design of
+                        your website.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" class="p-5 ml-5 pl-5">
+            <div class="columns">
+
+                <div class="column is-one-quarter has-text-centered mt-4 ml-3">
+                    <img src="{% static 'icons8-laptop-coding-96.png' %}" width="75"
+                         height="75">
+                </div>
+
+                <div class="column p-5 ml-5 pl-5 mt-3">
+                    <p class="text has-text-white is-size-5 has-text-weight-bold">3.
+                        Design & Development</p>
+                    <p class="text has-text-white pl-2">
+                        This is the phase of the project where the rubber really meets
+                        the road. Where we put our head down and work until your solutions
+                        have been met to your satisfaction, revisions are required on your end.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" class="p-5 ml-5 pl-5">
+            <div class="columns">
+
+                <div class="column is-one-quarter has-text-centered mt-4 ml-3">
+                    <img src="{% static 'icon-cloud.png' %}" width="75"
+                         height="75">
+                </div>
+
+                <div class="column p-5 ml-5 pl-5 mt-3">
+                    <p class="text has-text-white is-size-5 has-text-weight-bold">4.
+                        Cloud Hosting</p>
+                    <p class="text has-text-white pl-2">
+                        This is where your project is fully brought to life and only until
+                        all revisions have been made is your project hosted on our cloud
+                        hosting provider.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" class="p-5 ml-5 pl-5">
+            <div class="columns">
+
+                <div class="column is-one-quarter has-text-centered mt-4 ml-3">
+                    <img src="{% static 'partnership.png' %}" width="75"
+                         height="75">
+                </div>
+
+                <div class="column p-5 ml-5 pl-5 mt-3">
+                    <p class="text has-text-white is-size-5 has-text-weight-bold">5.
+                        Continued Partnership</p>
+                    <p class="text has-text-white pl-2">
+                        Just because your website is live does not mean that this is the end
+                        of the road, we continue our partnership with every single one of
+                        our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+</div>
+
+
+{% endblock %}

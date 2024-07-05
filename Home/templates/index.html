@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+{% block head %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification"
+          content="pKEmhkGIUvN9zvKPCbeiwEc9XsDbcOfJzEexyQMxhsc"/>
+    <title>Brillante Labs</title>
+
+    <link rel="icon" href="{% static 'icons8-idea-40.png' %}">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" type="text/css">
+
+
+</head>
+{% endblock %}
+
+<body>
+
+
+{% block preloader %}
+<div id="preloader">
+</div>
+
+{% endblock %}
+
+{% block navigation %}
+
+<nav class="navbar pt-3 is-align-items-center" role="navigation"
+     aria-label="main navigation">
+    <div class="navbar-brand">
+
+        <a class="navbar-item-brand is-size-2 has-text-white" href=
+                "{% url 'Home:home' %}"
+           style="font-family: hyperion; margin-left: 3vw;">
+            <strong>Brillante Labs</strong>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+            <span aria-hidden="true" style="color: white; height: 2px; width: 20px;"></span>
+            <span aria-hidden="true" style="color: white; height: 2px; width: 20px;"></span>
+            <span aria-hidden="true" style="color: white; height: 2px; width: 20px;"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+            <!--
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-white">
+                    More
+                </a>
+
+                <div class="navbar-dropdown" style="background-color: #27374D;">
+                    <a class="navbar-item has-text-white">
+                        About
+                    </a>
+                    <a class="navbar-item has-text-white">
+                        Testimonials
+                    </a>
+                    <a class="navbar-item has-text-white">
+                        Contact
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item has-text-white">
+                        Report an issue
+                    </a>
+                </div>
+            </div>
+            -->
+        </div>
+
+        <div class="navbar-end mr-5">
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:about_me' %}">
+                About Me
+            </a>
+
+
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:our_solutions' %}">
+                Our Work
+            </a>
+
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:FAQ' %}">
+                FAQ
+            </a>
+
+            <a class="button  has-text-white m-5 is-size-5 p-5
+                has-text-weight-bold"
+               href="{% url 'Home:contact_me' %}" style="background-color:
+                #BAA651; border: none; font-family: Charter;">
+                Let's Talk!
+            </a>
+        </div>
+
+    </div>
+</nav>
+{% endblock %}
+{% block mainbody %}
+
+<section class="hero" id="callToAction">
+
+    <div class="hero-head">
+
+
+    </div>
+
+    <div class="hero-body p-0">
+
+
+        <div id="message">
+
+            <p class="title is-size-1 has-text-white" id="messageText">Your Premier
+                Choice
+                For
+                Web Design & Development.</p>
+            <a class="button is-medium has-text-white is-size-5" id="messageButton"
+               href="#aboutUs"
+               style="background-color:
+                #BAA651; border: none;"><strong>Learn
+                More</strong></a>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero" style="background-color: black;" id="aboutUs">
+    <div class="columns mb-5 pb-5">
+
+        <div class="column is-one-third-fullhd is-half-tablet is-full-mobile
+            has-text-left
+            p-5 m-2">
+            <div class="column p-3">
+
+                <div id="heading">
+                    <p class="title has-text-white mb-2" style="font-family: Charter;">Who
+                        We Are.</p>
+                    <div id="horizontal-line"></div>
+                </div>
+
+                <div class="column p-0 mt-5">
+                    <p class="text pt-1 has-text-white has-text-weight-semibold">
+                        Hello there, my name is Juan Lizarraga-Cortez, and I am a
+                        freelance web developer based out of the midwest. I started
+                        Brillante Labs (formerly known as Prairie Code) in 2023. I
+                        discovered my passion for web development and programming during
+                        my undergraduate tenure at the University of Nebraska Omaha. I
+                        found myself being very entrepreneurial with the projects we
+                        were assigned, from launching a restaurant ordering business, to
+                        creating a social media site for local book users to creating a
+                        scheduling application for a local nail salon company. You can
+                        read more about me and my experience, at my "About Me" page below.
+
+                    </p>
+
+                    <div id="button-container-about-me" class="has-text-centered mt-5">
+                        <a class="button is-medium has-text-white is-size-5"
+                           id="messageButton" href="{% url 'Home:about_me' %}"
+                           style="background-color:
+                #BAA651; border: none;"><strong>About Me</strong></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="column is-two-thirds-fullhd is-half-tablet p-5 m-2 has-text-centered">
+            <img src="{% static 'me_cartoon.png' %}" width="450" height="450"
+                 style="position: relative;">
+        </div>
+    </div>
+
+    <div id="featuredProject" class="pt-5 mt-5" style="background-color: #1B1C1E;">
+        <div id="heading" style="text-align: center;">
+            <h1 class="title has-text-white" style="font-family: Charter;">Remodeling
+                Dreams
+                Construction</h1>
+        </div>
+
+        <div class="columns p-5 mt-5">
+            <div class="column is-half-fullhd p-5">
+                <img src="{% static 'rdc.png' %}" style="width: fit-content;">
+
+            </div>
+
+            <div class="column is-half-fullhd p-5">
+                <p class="text has-text-white has-text-weight-semibold">The need for a
+                    website for Remodeling
+                    Dreams
+                    Construction came about when as soon as I realized that there
+                    WordPress built website was down and was affected by poor
+                    security measures. Per my initial conversation with Kari the
+                    co-owner of RDC, it became quite clear that they were highly
+                    unsatisfied with a website that gave them little to no control
+                    over managing their content. It was very static to say the
+                    least not to mention the security issues and hacking that they
+                    had faced in the past. They had no media control, a very
+                    disorganized method for keeping track of their quote leads and
+                    a lack of mobile responsiveness. The solution? A website that
+                    allows my client to be able to manage their services,
+                    applicants, and quote leads. They can create new galleries for
+                    their projects that they complete and the website itself is
+                    mobile and tablet friendly.</p>
+            </div>
+
+        </div>
+
+        <div class="columns is-mobile is-centered mt-5 pt-5 mb-5 pb-5">
+            <div class="column is-half has-text-centered">
+                <p class="quote has-text-white has-text-weight-semibold">"Juan has been
+                    fantastic to work with and
+                    quite frankly
+                    a Godsend. His timing all through the website project and additional
+                    services has been just at the exact time we have needed and spot on.
+                    His attention to detail and ability to design such integrate detail is
+                    nothing short of amazing. He is always expedient to respond to the
+                    needs and has great ideas to resolve the matters. Appreciate what he
+                    continues to do to further our business needs. "</p><br/>
+
+                <p class="text has-text-white has-text-weight-semibold">- Kari </p>
+
+                <a class="button is-medium mt-3" id="messageButton" style="background-color:
+                #BAA651; border: none; color: white;"><strong>View
+                    Project</strong></a>
+
+                <div class="hr mt-5" style="width: 50%; border: 2px solid
+                                #9F8B3B; margin-left: 25%;"></div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="hero" style="background-color: black; margin-top: 5%; margin-bottom: 5%;"
+         id="poweredBy">
+    <div class="columns mb-5">
+        <div class="column is-one-third-fullhd p-5 m-2">
+            <div class="column p-3">
+
+                <div id="heading">
+                    <p class="title has-text-white mb-2" style="font-family: Charter;
+                    ">Powered By.</p>
+                    <div id="horizontal-line"></div>
+                </div>
+
+                <div class="column is-full p-0 mt-5">
+                    <p class="text pt-1 has-text-white has-text-weight-semibold"
+                       style="font-family: Charter;">Leveraging the power of modern
+                        technologies to bring your ideas to life.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-two-thirds-fullhd">
+
+            <div class="columns is-vertical">
+
+                <div
+                        class="column is-flex-wrap-wrap is-justify-content-center is-align-items-center	has-text-centered p-5">
+                    <div id="image_container">
+                        <img src="{% static 'mysql.png' %}" class="ml-2 mr-2">
+                        <img src="{% static 'html5.png' %}" class="ml-2 mr-2">
+                        <img src="{% static 'python.png' %}" class="ml-2 mr-2">
+                        <img src="{% static 'aws.png' %}" class="ml-2 mr-2">
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="hero" style="background-color: black;"
+         id="services">
+
+    <div class="columns">
+
+        <div class="column is-one-third-desktop is-full-mobile has-text-left p-5 m-2">
+            <div class="column p-3">
+
+
+                <div id="heading">
+                    <p class="title has-text-white mb-2" style="font-family: Charter;">
+                        <strong>What We Provide.</strong></p>
+                    <div id="horizontal-line">
+                    </div>
+
+                </div>
+
+
+                <div class="column is-four-fifths-fullhd p-0 mt-5">
+                    <p class="text pt-1 has-text-white has-text-weight-semibold"
+                       style="font-family:
+                        Charter;">With
+                        Brillante Labs we Offer a wealth of services, in order to
+                        complete the A-Z process of designing and developing a website
+                        for you. Contact us below to learn more about how Brillante Labs
+                        can help you.</p>
+
+                    <div id="button-container-contact-us" class="has-text-centered mt-5 pb-5">
+                        <a class="button is-medium has-text-white is-size-5"
+                           href="{% url 'Home:contact_me' %}"
+                           style="background-color:
+                #BAA651; border: none; font-family: Charter;"><strong>Let's Talk!</strong></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="column is-two-thirds-desktop is-full-mobile">
+
+            <div class="p-3 columns is-centered is-mobile is-flex-wrap-wrap">
+
+                <div class="column is-half-desktop is-two-fifths-fullhd
+                    is-four-fifths-mobile">
+                    <div class="card m-5 is-full-mobile" style="border-radius:
+                        5%; background-color: #1B1C1E;">
+                        <div class="card-header p-5 is-shadowless">
+                            <img src="{% static 'development.png' %}">
+                        </div>
+                        <div class="card-content mr-5">
+                            <p class="title has-text-white" style="font-family:
+                                'Charter';">Development</p>
+                            <p class="has-text-white mr-5" style="font-family:
+                                'Charter';">Our
+                                Development process ensures
+                                that we provide your website with all the features and
+                                services of your choosing.</p>
+                        </div>
+
+                        <footer class="card-footer is-shadowless is-borderless
+                            has-text-centered p-5"
+                                style="border: none; justify-content: center;">
+                            <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                        </footer>
+                    </div>
+                </div>
+
+
+                <div class="column is-half-desktop is-two-fifths-fullhd is-four-fifths-mobile"
+                     style="margin-top: 5%;">
+                    <div class="card m-5" style="border-radius:
+                        5%; background-color: #1B1C1E;">
+                        <div class="card-header p-5 is-shadowless">
+                            <img src="{% static 'database.png' %}">
+                        </div>
+                        <div class="card-content mr-5 p-5">
+                            <p class="title has-text-white" style="font-family:
+                                'Charter';">Database</p>
+                            <p class="has-text-white mr-5" style="font-family:
+                                'Charter';">With a well-designed
+                                and developed database
+                                we can insure you are able
+                                to perform any and all
+                                necessary data operations.</p>
+                        </div>
+
+                        <footer class="card-footer is-shadowless is-borderless
+                            has-text-centered p-5"
+                                style="border: none; justify-content: center;">
+                            <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                        </footer>
+
+                    </div>
+                </div>
+
+
+                <div class="column is-two-fifths-fullhd is-half-desktop is-four-fifths-mobile">
+
+                    <div class="card mb-5 mt-5 m-5" style="border-radius:
+                        5%; background-color: #1B1C1E;">
+                        <div class="card-header p-5 is-shadowless">
+                            <img src="{% static 'design.png' %}">
+                        </div>
+                        <div class="card-content mr-5">
+                            <p class="title has-text-white" style="font-family:
+                                'Charter';">Design</p>
+                            <p class="has-text-white mr-5" style="font-family:
+                                'Charter';">
+                                Our thoughtfully & beautifully
+                                designed websites ensure
+                                that we curate the perfect
+                                user experience.
+                            </p>
+                        </div>
+
+                        <footer class="card-footer is-shadowless is-borderless
+                            has-text-centered p-5"
+                                style="border: none; justify-content: center;">
+                            <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                        </footer>
+
+                    </div>
+                </div>
+
+                <div class="column is-two-fifths-fullhd is-half-desktop is-four-fifths-mobile"
+                     style="margin-top: 5%;">
+
+
+                    <div class="card mb-5 m-5" style="border-radius:
+                        5%; background-color: #1B1C1E;">
+                        <div class="card-header p-5 is-shadowless">
+                            <img src="{% static 'cloud.png' %}">
+                        </div>
+                        <div class="card-content has-text-left mr-5">
+                            <p class="title has-text-white" style="font-family:
+                                'Charter';">Cloud Hosting</p>
+                            <p class="has-text-white mr-5" style="font-family:
+                                'Charter';">We leverage modern cloud
+                                technologies in order to
+                                bring your website to life,
+                                making it easy for the world
+                                to know just who you are.</p>
+                        </div>
+
+                        <footer class="card-footer is-shadowless is-borderless
+                            has-text-centered p-5"
+                                style="border: none; justify-content: center;">
+                            <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                        </footer>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="columns pt-5 mt-5">
+    <div class="column is-one-third has-text-centered mt-5">
+        <p class="title has-text-white">3+</p>
+        <p class="title has-text-white">Satisfied Clients</p>
+
+    </div>
+
+    <div class="column is-one-third has-text-centered mt-5">
+        <p class="title has-text-white">100%</p>
+        <p class="title has-text-white">Website Uptime</p>
+
+    </div>
+
+    <div class="column is-one-third has-text-centered mt-5">
+        <p class="title has-text-white">3+</p>
+        <p class="title has-text-white">Years Of Experience</p>
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+{% block footer %}
+
+<footer class="footer has-text-centered pb-2" style="background-color: black;">
+    <div id="branding">
+        <p class="text has-text-white has-text-weight-bold">@ Brillante Labs</p>
+    </div>
+
+</footer>
+{% endblock %}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function () {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+
+        });
+    });
+
+</script>
+
+</body>
+
+</html>

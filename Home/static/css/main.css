@@ -1,0 +1,197 @@
+/*removes default margin & padding*/
+html, body {
+    padding: 0px !important;
+    margin: 0px !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth !important;
+
+}
+
+/*sets body height to max; and allows scrollbar as page content grows*/
+body {
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    background-color: black;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+textarea[id="content"]::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+
+input[type="email"]::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+input[type="text"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    color: white;
+    font-weight: bold;
+}
+
+input[type="tel"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    color: white;
+    font-weight: bold;
+}
+
+
+
+footer {
+    bottom: 0;
+    margin-top: auto;
+    background-color: black;
+}
+
+@keyframes textFade {
+
+
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
+
+#aboutUs {
+    min-height: 100vh;
+    padding-bottom: 5vh;
+}
+
+#callToAction {
+    background-image: url("../AdobeStock_724882815.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-resize: none;
+    min-height: 75vh;
+    max-height: 75vh;
+}
+
+.box {
+    background-color: #1B1C1E;
+}
+
+#message {
+    text-align: center;
+    width: 100%;
+    margin-top: 15vh;
+}
+
+
+#messageText {
+    font-family: "Charter";
+    animation: 2s textFade;
+}
+
+#messageButton {
+    font-family: "Charter";
+    animation: 2s textFade;
+}
+
+
+#horizontal-line {
+    content: '';
+    position: relative;
+    background-color: white;
+    height: 3px;
+    width: 25%;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-item {
+    padding: 0;
+    font-family: 'Palatino'
+}
+
+.navbar-item::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.5s ease;
+}
+
+.navbar-item:hover {
+    background: none !important;
+
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+#tabs {
+    position: relative;
+    gap: 10px;
+}
+
+
+.tab:hover {
+    opacity: 0.33;
+}
+
+
+#project:hover {
+    opacity: 0.75;
+}
+
+#tabs::after {
+    content: '';
+    position: absolute;
+    background-color: lightgray;
+    margin-top: 5px;
+    height: 2px;
+    width: 50%;
+    left: 25%;
+
+}
+
+li {
+    list-style-type: bullet;
+    color: white;
+    font-family: Charter;
+}
+
+p {
+    font-family: Charter;
+
+}
+
+h1 {
+    font-family: Charter;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .navbar-menu {
+    background-color: black;
+  }
+}

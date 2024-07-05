@@ -1,0 +1,135 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block mainbody %}
+
+    <section class="hero mt-5">
+
+        <div class="column has-text-centered">
+            <h1 class="title is-size-2 has-text-white has-text-weight-semibold"
+                id="messageButton">
+                {{ project.project_name }}
+            </h1>
+
+            <img src="/media/{{ project.thumbnail }}" width="1100" height="550">
+
+            <br>
+            {% if project.project_type == "Professional" %}
+
+                <a class="button is-medium mt-3 has-text-weight-bold"
+                   href="{{ project.project_link }}" target="_blank" style="background-color:
+                #BAA651; border: none; color: white; font-family: Charter;">Visit Website</a>
+
+            {% endif %}
+        </div>
+
+        <div class="columns is-mobile is-centered m-5">
+            <div class="column is-two-thirds-fullhd">
+                <div class="card m-5 is-full-mobile p-5" style="border-radius:
+                        1%; background-color: #1B1C1E;">
+
+                    <div class="card-header p-2 is-shadowless is-flex is-align-items-center">
+                        <img src="{% static "story.png" %}">
+                        &nbsp;
+                        &nbsp;
+                        <h1 class="title has-text-white mt-3">The Story</h1>
+                    </div>
+
+                    <div class="card-content mr-5">
+                        <p class="has-text-white mr-5">
+                            {{ project.story }}
+                        </p>
+                    </div>
+
+                    <footer class="card-footer p-0 m-0 is-shadowless is-borderless
+                            has-text-centered p-5"
+                            style="border: none; justify-content: center;">
+                        <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-mobile is-centered m-5">
+            <div class="column is-two-thirds-fullhd">
+                <div class="card m-5 is-full-mobile p-5" style="border-radius:
+                        1%; background-color: #1B1C1E;">
+
+                    <div class="card-header p-2 is-shadowless is-flex is-align-items-center">
+                        <img src="{% static "gears.png" %}">
+                        &nbsp;
+                        &nbsp;
+                        <h1 class="title has-text-white mt-3">Project Features</h1>
+                    </div>
+
+                    <div class="card-content mr-5">
+                        <p class="has-text-white mr-5">
+                            {{ project.functionalities }}
+                        </p>
+                    </div>
+
+                    <footer class="card-footer is-shadowless is-borderless
+                            has-text-centered p-5"
+                            style="border: none; justify-content: center;">
+                        <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-mobile is-centered m-5">
+            <div class="column is-two-thirds-fullhd">
+                <div class="card m-5 is-full-mobile p-5" style="border-radius:
+                        1%; background-color: #1B1C1E;">
+
+                    <div class="card-header p-2 is-shadowless is-flex is-align-items-center">
+                        <img src="{% static "testimonial.png" %}">
+                        &nbsp;
+                        &nbsp;
+                        <h1 class="title has-text-white mt-3">Client Testimonial</h1>
+                    </div>
+
+                    <div class="card-content mr-5">
+                        <p class="has-text-white mr-5">
+                            {{ project.testimonial }}
+                        </p>
+                    </div>
+
+                    <footer class="card-footer is-shadowless is-borderless
+                            has-text-centered p-5"
+                            style="border: none; justify-content: center;">
+                        <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B;"></div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="column has-text-centered m-5">
+            <h1 class="title is-size-2 has-text-white has-text-weight-semibold">Project
+                Gallery</h1>
+        </div>
+
+        <div class="columns is-flex-wrap-wrap p-5">
+            {% for image in gallery %}
+                <div class="column is-one-third">
+                    <a href="/media/{{ image }}" data-lightbox="models"
+                       data-title="{{ image.caption }}">
+                        <img src="/media/{{ image }}">
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <script type="text/javascript" src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
+    
+    </section>
+{% endblock %}
+
+
+
+

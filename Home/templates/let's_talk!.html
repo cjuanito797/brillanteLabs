@@ -1,0 +1,144 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+
+{% block mainbody %}
+
+<section class="hero">
+
+    <div class="hero-body">
+        <div class="columns is-centered is-mobile">
+
+
+            <div
+                    class="column is-half-desktop is-half-fullhd is-three-quarters-tablet is-four-fifths-mobile">
+
+                <h1
+                        class="title has-text-centered has-text-white has-text-weight-semibold pb-5 mb-5 mt-3">
+                    Interested in working with us?
+                    Simply Drop us a message below.</h1>
+
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="field is-horizontal">
+
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-text-white">
+                                    <input
+                                            class="input has-text-white has-text-weight-semibold" type="text"
+                                           name="name" id="name"
+                                           placeholder="First & Last Name" required
+                                           style="background-color: #38383B;">
+
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-icons-right">
+                                    <input class="input" type="email" required
+                                           placeholder="Email" name="email" id="email"
+                                           style="background-color: #38383B; color: white;
+                                           font-weight: bold;">
+                                    <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+                                    <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field is-expanded">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static has-text-white"
+                                           style="background-color: #38383B;">
+                                            <strong>+1</strong>
+                                        </a>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <input class="input" type="tel" id="tel" name="tel"
+                                               required
+                                               placeholder="Phone Number"
+                                               style="background-color: #38383B; color:
+                                               white; font-weight: bold;">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select type="select" id="occupation"
+                                                name="occupation" required
+                                                 style="background-color: #38383B; color:
+                                                 white; font-weight: bold;">
+                                            <option value="" disabled selected>Choose your
+                                                occupation
+                                            </option>
+                                            <option>Business development</option>
+                                            <option>Marketing</option>
+                                            <option>Sales</option>
+                                            <option>Construction</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="field is-horizontal">
+
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                        <textarea class="textarea" id="content" name="content"
+                                  placeholder="Explain how we can help you" required
+                                  style="background-color: #38383B; color: white;
+                                  font-weight: bold;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+
+                        <div class="field-body has-text-centered mt-5">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-medium p-3 has-text-white"
+                                            type="submit" required
+                                            id="messageButton" style="font-family: Charter;
+                                            background-color: #BAA561; border: none;">
+                                        <strong>Let's Talk!</strong></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}
