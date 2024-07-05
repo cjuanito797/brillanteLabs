@@ -98,11 +98,13 @@ footer {
 
 #messageText {
     font-family: "Charter";
+    animation-delay: 2s;
     animation: 2s textFade;
 }
 
 #messageButton {
     font-family: "Charter";
+    animation-delay: 2500ms;
     animation: 2s textFade;
 }
 
