@@ -57,9 +57,15 @@ footer {
 
 
     0% {
+
         transform: translateY(100%);
         opacity: 0;
 
+    }
+
+    25% {
+        opacity: 0;
+        animation-delay: 10ms;
     }
 
     100% {
@@ -98,14 +104,14 @@ footer {
 
 #messageText {
     font-family: "Charter";
-    animation-delay: 2s;
     animation: 2s textFade;
+
 }
 
 #messageButton {
     font-family: "Charter";
-    animation-delay: 2500ms;
     animation: 2s textFade;
+
 }
 
 
