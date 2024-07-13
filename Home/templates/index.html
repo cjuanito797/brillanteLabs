@@ -499,7 +499,9 @@
 </footer>
 {% endblock %}
 
-<script src="{% static 'js/main.js' %}"></script>
+{% block javascript %}
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
 
 
 <script type="text/javascript">

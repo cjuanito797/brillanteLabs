@@ -27,13 +27,16 @@
 
 {% block mainbody %}
 
+<div id="top_padding" style="margin-top: 10vh;">
+</div>
+
 <section class="hero is-three-quarters" id="login_form">
 
 
     <div class="hero-body">
         <div class="columns is-mobile is-centered">
             <div
-                    class="column is-one-fifths-fullhd is-two-fifths-desktop is-four-fifths-mobile is-half-tablet p-5 m-3">
+                    class="column is-one-fifths-fullhd is-two-fifths-desktop is-full-mobile is-half-tablet  p-5 m-3">
                 <div class="box" style="margin-top: 25%; border: 2px solid #BAA651;
                 background-color: #262729;">
 
@@ -100,6 +103,9 @@
 
 {% endblock %}
 
+{% block javascript %}
+    <script src="{% static 'js/navbar_change.js' %}"></script>
+{% endblock %}
 
 
 

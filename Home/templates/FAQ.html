@@ -4,8 +4,12 @@
 
 
 {% block mainbody %}
+<div id="top_padding" style="margin-top: 10vh;">
+    </div>
 
-<div class="columns is-centered is-mobile mt-5 pt-5 mb-5 pb-5" style="margin-top: 5%;">
+
+<div class="columns is-centered is-mobile mt-5 pt-5 mb-5 pb-5"
+     id="content">
 
     <div
             class="column is-half-fullhd is-three-quarters-tablet is-full-mobile is-justify-content-center">
@@ -160,4 +164,8 @@
 </div>
 
 
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/navbar_change.js' %}"></script>
 {% endblock %}

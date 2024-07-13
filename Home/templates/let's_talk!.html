@@ -5,7 +5,10 @@
 
 {% block mainbody %}
 
-<section class="hero" style="margin-top: 7%;">
+<div id="top_padding" style="margin-top: 10vh;">
+</div>
+
+<section class="hero">
 
     <div class="hero-body">
         <div class="columns is-centered is-mobile">
@@ -141,4 +144,8 @@
 </section>
 
 
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/navbar_change.js' %}"></script>
 {% endblock %}
