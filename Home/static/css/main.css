@@ -82,11 +82,12 @@ footer {
 }
 
 #callToAction {
+    margin-top: 10%;
     background-image: url("../Background/JPEG/AdobeStock_724882815.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-resize: none;
+    background-resize: cover;
     min-height: 75vh;
     max-height: 75vh;
 }
@@ -154,6 +155,12 @@ footer {
 
 .navbar-item:hover::after {
     width: 100%;
+}
+
+.navbar.active {
+    background-color: #BAA651;
+    transition: background-color 500ms ease-in-out;
+
 }
 
 #tabs {
