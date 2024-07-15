@@ -3,6 +3,9 @@
 
 
 {% block mainbody %}
+<div id="top_padding" style="margin-top: 10vh;">
+</div>
+
 
     <section class="hero mt-5">
 
@@ -36,8 +39,8 @@
                         <h1 class="title has-text-white mt-3">The Story</h1>
                     </div>
 
-                    <div class="card-content mr-5">
-                        <p class="has-text-white mr-5">
+                    <div class="card-content">
+                        <p class="has-text-white">
                             {{ project.story }}
                         </p>
                     </div>
@@ -64,8 +67,8 @@
                         <h1 class="title has-text-white mt-3">Project Features</h1>
                     </div>
 
-                    <div class="card-content mr-5">
-                        <p class="has-text-white mr-5">
+                    <div class="card-content">
+                        <p class="has-text-white">
                             {{ project.functionalities }}
                         </p>
                     </div>
@@ -92,8 +95,8 @@
                         <h1 class="title has-text-white mt-3">Client Testimonial</h1>
                     </div>
 
-                    <div class="card-content mr-5">
-                        <p class="has-text-white mr-5">
+                    <div class="card-content">
+                        <p class="has-text-white">
                             {{ project.testimonial }}
                         </p>
                     </div>
@@ -128,6 +131,10 @@
         <script type="text/javascript" src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
     
     </section>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/navbar_change.js' %}"></script>
 {% endblock %}
 
 
