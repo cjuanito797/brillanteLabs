@@ -40,11 +40,16 @@
      aria-label="main navigation" id="navbar">
     <div class="navbar-brand">
 
-        <a class="navbar-item-brand is-size-2 has-text-white" href=
+        <a class="navbar-item-brand is-size-2 has-text-white is-flex is-align-items-center"
+           href=
                 "{% url 'Home:home' %}"
            style="font-family: hyperion; margin-left: 3vw;">
-            <strong>Brillante Labs</strong>
+            <p class="text"><strong>Brillante Labs</strong></p>
+            <img src="{% static 'bulb.png' %}">
+
+
         </a>
+
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
            data-target="navbarBasicExample">
@@ -106,11 +111,10 @@
                 </div>
             </div>
             -->
-            <a class="button  has-text-white m-5 is-size-5 p-5
-                has-text-weight-bold"
-               href="{% url 'Home:contact_me' %}" style="background-color:
-                #BAA651; border: none; font-family: Charter;">
-                Let's Talk!
+            <a class="button is-primary has-text-white m-5 is-size-5 p-5
+                has-text-weight-bold" id="contact_me_button"
+               href="{% url 'Home:contact_me' %}" style="border: none; font-family: Charter;">
+                <p id="contact_us_text"d>Let's Talk!</p>
             </a>
         </div>
 
@@ -494,7 +498,7 @@
 
 <footer class="footer has-text-centered pb-2" style="background-color: black;">
     <div id="branding">
-        <p class="text has-text-white has-text-weight-bold">@ Brillante Labs</p>
+        <p class="text has-text-white has-text-weight-bold m-0">@ Brillante Labs</p>
     </div>
 </footer>
 {% endblock %}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+
+{% block head %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification"
+          content="pKEmhkGIUvN9zvKPCbeiwEc9XsDbcOfJzEexyQMxhsc"/>
+    <title>Welcome</title>
+
+    <link rel="icon" href="{% static 'icons8-idea-40.png' %}">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+{% endblock %}
+<body>
+
+{% block navigation %}
+
+<nav class="navbar pt-1 is-align-items-center is-fixed-top" role="navigation"
+     aria-label="main navigation" id="navbar">
+    <div class="navbar-brand">
+
+        <a class="navbar-item-brand is-size-2 has-text-white is-flex is-align-items-center"
+           href=
+                   "{% url 'client:dashboard' %}"
+           style="font-family: hyperion; margin-left: 2vw;">
+            <p class="text"><strong>Brillante Labs</strong></p>
+            <img src="{% static 'bulb.png' %}" alt="logo">
+        </a>
+
+        <a role="button" class="navbar-burger mt-1" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+                <span aria-hidden="true"
+                      style="color: white; height: 2px; width: 20px;"></span>
+            <span aria-hidden="true"
+                  style="color: white; height: 2px; width: 20px;"></span>
+            <span aria-hidden="true"
+                  style="color: white; height: 2px; width: 20px;"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+
+        </div>
+
+        <div class="navbar-end mr-5">
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-white m-5 is-size-5">
+                    More
+                </a>
+
+                <div class="navbar-dropdown" style="background-color: black;">
+                    <a class="navbar-item has-text-white m-5 is-size-5">
+                        Payment
+                    </a>
+                    <a class="navbar-item has-text-white m-5 is-size-5">
+                        Change Password
+                    </a>
+
+                    <hr class="navbar-divider">
+                    <a class="navbar-item has-text-white m-5 is-size-5">
+                        Report an issue
+                    </a>
+                </div>
+            </div>
+
+            <a class="button is-info has-text-white m-5 is-size-5 p-5
+                has-text-weight-bold is-flex is-align-items-center"
+               href="" style="border: none; font-family:
+               Charter;">
+                <p class="text">Create Ticket</p>
+                &nbsp;
+                <img src="{% static 'ticket.png' %}" width="25" height="25"
+                     alt="ticket-logo">
+            </a>
+
+            <form method="post" action="{% url 'client:logout' %}">
+                {% csrf_token %}
+                <button class="button is-danger m-5 p-5 has-text-weight-bold is-size-5"
+                        style="font-family: Charter;" type="submit">
+                    Sign Out
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+</nav>
+
+
+{% endblock %}
+
+{% block mainbody %}
+
+<main>
+
+    <div id="top_padding" style="margin-top: 6vh;">
+    </div>
+
+    <section class="hero">
+
+        <div class="hero-body mt-5">
+
+            <h1 class="title has-text-white is-size-1 is-size-2-mobile
+                     has-text-centered">Welcome {{this_user.first_name}}</h1>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
+
+{% block footer %}
+
+<footer class="footer has-text-centered pb-2" style="background-color: black;">
+    <div id="branding">
+        <p class="text has-text-white has-text-weight-bold">@ Brillante Labs</p>
+    </div>
+</footer>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/navbar_change.js' %}"></script>
+{% endblock %}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function () {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+
+        });
+    });
+
+</script>
+
+
+</body>
+
+
+</html>

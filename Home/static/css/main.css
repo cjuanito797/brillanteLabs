@@ -5,6 +5,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth !important;
+    background: black;
 
 }
 
@@ -45,16 +46,15 @@ input[type="tel"]::placeholder {
     font-weight: bold;
 }
 
-
-
 footer {
     bottom: 0;
     margin-top: auto;
     background-color: black;
+    vertical-align: top;
+    overflow: hidden;
 }
 
 @keyframes textFade {
-
 
     0% {
 
@@ -74,7 +74,6 @@ footer {
 
     }
 }
-
 
 #aboutUs {
     min-height: 100vh;
@@ -114,7 +113,6 @@ footer {
     animation: 2s textFade;
 
 }
-
 
 #horizontal-line {
     content: '';
@@ -160,7 +158,14 @@ footer {
 .navbar.active {
     background-color: #BAA651;
     transition: background-color 500ms ease-in-out;
+}
 
+#contact_me_button.active {
+    background-color: white;
+}
+
+#contact_us_text.active {
+    color: #BAA651;
 }
 
 #tabs {

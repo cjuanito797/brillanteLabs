@@ -44,11 +44,14 @@
                             class="is-title is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold"
                         style="color: #BAA651;">Brillante Labs</h1>
 
-                    <form action="/login/" method="post" class="px-5 py-5 mt-5 pt-5 p-4">
+                    <form action ='/client/login/' method="post"
+                          class="px-5 py-5 mt-5 pt-5 p-4">
 
+                        {% csrf_token %}
                         <div class="field">
                             <p class="control has-icons-left has-icons-right">
-                                <input class="input" type="username" placeholder="Username">
+                                <input class="input" type="username" placeholder="Username"
+                                       required id="id_username" name="username">
                                 <span class="icon is-small is-left p-1">
                                     <img src="{% static 'username.png' %}">
                                 </span>
@@ -58,7 +61,8 @@
 
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input class="input" type="password" placeholder="Password">
+                                <input class="input" type="password" placeholder="Password"
+                                       name="password" required id="id_password">
                                 <span class="icon is-small is-left p-1">
                                     <img src="{% static 'password.png' %}">
                                 </span>
