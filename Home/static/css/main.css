@@ -54,30 +54,75 @@ footer {
     overflow: hidden;
 }
 
+#cursor {
+    color: #BAA651;
+    animation: blink 1s linear infinite;
+
+  }
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+}
+
 @keyframes textFade {
 
     0% {
 
-        transform: translateY(100%);
+        transform: translateX(-100%);
         opacity: 0;
 
-    }
-
-    25% {
-        opacity: 0;
-        animation-delay: 10ms;
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateX(0%);
+        opacity: 1;
+
+    }
+}
+
+@keyframes buttonFade {
+
+    0% {
+
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0%);
         opacity: 1;
 
     }
 }
 
 #aboutUs {
-    min-height: 100vh;
+    min-height: 65vh;
     padding-bottom: 5vh;
+}
+
+#my_featured_projects {
+    min-height: 65vh;
+    padding-bottom: 10vh;
+}
+
+#custom_button {
+    background: linear-gradient(90deg, rgba(198,194,27,1) 0%, rgba(242,136,9,1) 100%);
+    border: none;
+    font-family: Charter;
+    font-weight: bold;
+
 }
 
 #callToAction {
@@ -96,7 +141,6 @@ footer {
 }
 
 #message {
-    text-align: center;
     width: 100%;
     margin-top: 10vh;
 }
@@ -110,7 +154,9 @@ footer {
 
 #messageButton {
     font-family: "Charter";
-    animation: 2s textFade;
+    animation: buttonFade 3000ms ease 1 normal;
+    animation-fill-mode: both;
+
 
 }
 

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification"
           content="pKEmhkGIUvN9zvKPCbeiwEc9XsDbcOfJzEexyQMxhsc"/>
-    <title>Brillante Labs</title>
+    <title>Code By Juan </></title>
 
     <link rel="icon" href="{% static 'icons8-idea-40.png' %}">
 
@@ -42,9 +42,9 @@
 
         <a class="navbar-item-brand is-size-2 is-size-2-mobile has-text-white is-flex is-align-items-center"
            href=
-                "{% url 'Home:home' %}"
+                   "{% url 'Home:home' %}"
            style="font-family: hyperion; margin-left: 3vw;">
-            <p class="text"><strong>Brillante Labs</strong></p>
+            <p class="text"><strong>Code By Juan</strong></p>
             <img src="{% static 'bulb.png' %}" width="50" height="50">
 
 
@@ -74,12 +74,18 @@
 
             <a class="navbar-item has-text-white m-5 is-size-5"
                href="{% url 'Home:our_solutions' %}">
-                <p class="text">Our Work</p>
+                <p class="text">Project Showcase</p>
             </a>
+
 
             <a class="navbar-item has-text-white m-5 is-size-5"
                href="{% url 'Home:FAQ' %}">
                 <p class="text">FAQ</p>
+            </a>
+
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:our_services' %}">
+                <p class="text">Blog</p>
             </a>
 
             <a class="navbar-item has-text-white m-5 is-size-5 is-flex is-align-items-center"
@@ -111,11 +117,20 @@
                 </div>
             </div>
             -->
-            <a class="button has-text-white m-5 is-size-5 p-5
+
+            <div class="navbar-item">
+                <div class="buttons">
+
+                    <a class="button has-text-white m-5 is-size-5 p-5
                 has-text-weight-bold" id="contact_me_button"
-               href="{% url 'Home:contact_me' %}" style="border: none; font-family: Charter;">
-                <p id="contact_us_text" style="color: #BAA651;">Let's Talk!</p>
-            </a>
+                       href="{% url 'Home:contact_me' %}"
+                       style="border: none; font-family: Charter;">
+                        <p id="contact_us_text" style="color: #BAA651;">Let's Talk!</p>
+                    </a>
+                </div>
+            </div>
+
+
         </div>
 
     </div>
@@ -141,22 +156,33 @@
 
         <div class="hero-body p-0">
 
+            <div id="message" class="has-text-centered-mobile">
 
-            <div id="message">
+                <p class="title is-size-1 has-text-white is-size-1-mobile"
+                   id="messageText" style="margin-left: 7%; margin-right: 5%;">
+                    Hello! My Name Is <span>Juan
+                    Lizarraga-Cortez.</span> </br> I Am A Fullstack
+                    Website <span id="typewriter" style="
+  background: linear-gradient(90deg, rgba(198,194,27,1) 0%, rgba(242,136,9,1) 100%);
 
-                <p class="title is-size-1 has-text-white is-size-1-mobile" id="messageText">
-                    Your
-                    Premier Choice For Web Design & Development.</p>
-                <a class="button is-medium has-text-white is-size-5" id="messageButton"
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+"></span><span id="cursor">|</span></p>
+
+                <a class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                   id="messageButton"
                    href="#aboutUs"
-                   style="background-color:#BAA651; border: none;"><strong>Learn More</strong></a>
+                   style="background: linear-gradient(90deg, rgba(198,194,27,1) 0%, rgba(242,136,9,1) 100%);
+ border: none; margin-left: 7%;
+                   margin-right: 5%;"><strong>Learn More</strong></a>
+
             </div>
         </div>
     </section>
 
 
     <section class="hero" style="background-color: black;" id="aboutUs">
-        <div class="columns mb-5 pb-5">
+        <div class="columns">
 
             <div class="column is-one-third-fullhd is-half-tablet is-full-mobile
             has-text-left
@@ -164,9 +190,9 @@
                 <div class="column p-3">
 
                     <div id="heading">
-                        <p class="title has-text-white mb-2" style="font-family: Charter;">Who
-                            We Are.</p>
-                        <div id="horizontal-line"></div>
+                        <p class="title has-text-white mb-2"
+                           style="font-family: Charter;">About Me
+                        </p>
                     </div>
 
                     <div class="column p-0 mt-5">
@@ -186,9 +212,8 @@
 
                         <div id="button-container-about-me" class="has-text-centered mt-5">
                             <a class="button is-medium has-text-white is-size-5"
-                               id="messageButton" href="{% url 'Home:about_me' %}"
-                               style="background-color:
-                #BAA651; border: none;"><strong>About Me</strong></a>
+                               id="custom_button" href="{% url 'Home:about_me' %}">
+                                <strong>About Me</strong></a>
                         </div>
                     </div>
 
@@ -202,104 +227,153 @@
             </div>
         </div>
 
-        <div id="featuredProject" class="pt-5 mt-5" style="background-color: #1B1C1E;">
-            <div id="heading" style="text-align: center;">
-                <h1 class="title has-text-white" style="font-family: Charter;">Remodeling
-                    Dreams
-                    Construction</h1>
-            </div>
-
-            <div class="columns p-5 mt-5">
-                <div class="column is-half-fullhd p-3">
-                    <img src="{% static 'rdc.png' %}" style="width: fit-content;">
-
-                </div>
-
-                <div class="column is-half-fullhd p-2">
-                    <p class="text has-text-white has-text-weight-semibold">The need for a
-                        website for Remodeling Dreams Construction came about when their
-                        previous "WordPress" hosted website became vulnerable to internet
-                        hackers. They faced some limitations such as not being able to add
-                        imagery of their own, they lacked any sense of funneling for generating
-                        client leads and their previous website did not display their
-                        professionalism. A solution was created for them, and you can read more
-                        about the project by following the link below.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="columns is-mobile is-centered mt-5 pt-5 mb-5 pb-5">
-                <div class="column is-half-fullhd is-four-fifths-mobile has-text-centered p-2">
-                    <p class="quote has-text-white has-text-weight-semibold">"Juan has been
-                        fantastic to work with and
-                        quite frankly
-                        a Godsend. His timing all through the website project and additional
-                        services has been just at the exact time we have needed and spot on.
-                        His attention to detail and ability to design such integrate detail is
-                        nothing short of amazing. He is always expedient to respond to the
-                        needs and has great ideas to resolve the matters. Appreciate what he
-                        continues to do to further our business needs. "</p><br/>
-
-                    <p class="text has-text-white has-text-weight-semibold">- Kari </p>
-
-                    <!--
-                    <a class="button is-medium mt-3" id="messageButton" style="background-color:
-                    #BAA651; border: none; color: white;"><strong>View
-                        Project</strong></a>
-                    -->
-
-
-                    <div class="hr mt-5" style="width: 50%; border: 2px solid
-                                #9F8B3B; margin-left: 25%;"></div>
-
-                </div>
-            </div>
-
-
-        </div>
     </section>
 
-    <section class="hero" style="background-color: black; margin-top: 5%; margin-bottom: 5%;"
-             id="poweredBy">
-        <div class="columns mb-5">
-            <div class="column is-one-third-fullhd p-5 m-2">
-                <div class="column p-3">
+    <section class="hero" id="my_featured_projects">
 
-                    <div id="heading">
-                        <p class="title has-text-white mb-2" style="font-family: Charter;
-                    ">Powered By.</p>
-                        <div id="horizontal-line"></div>
-                    </div>
+        <div id="featured_projects" class="mb-5">
 
-                    <div class="column is-full p-0 mt-5">
-                        <p class="text pt-1 has-text-white has-text-weight-semibold"
-                           style="font-family: Charter;">Leveraging the power of modern
-                            technologies to bring your ideas to life.</p>
-                    </div>
-                </div>
+            <div id="heading" class="p-5 m-2">
+                <p class="title has-text-white"
+                   style="font-family: Charter;">Our Most Recent Work.
+                </p>
             </div>
 
-            <div class="column is-two-thirds-fullhd">
-
-                <div class="columns is-vertical">
-
+            <div id="remodeling-dreams-construction">
+                <div class="columns p-5 is-centered is-mobile">
                     <div
-                            class="column is-flex-wrap-wrap is-justify-content-center is-align-items-center	has-text-centered p-5">
-                        <div id="image_container">
-                            <img src="{% static 'mysql.png' %}" class="ml-2 mr-2">
-                            <img src="{% static 'html5.png' %}" class="ml-2 mr-2">
-                            <img src="{% static 'python.png' %}" class="ml-2 mr-2">
-                            <img src="{% static 'aws.png' %}" class="ml-2 mr-2">
+                            class="column is-four-fifths-fullhd is-full-tablet is-full-mobile p-5 m-5 is-align-items-center">
+                        <div class="columns is-flex-tablet is-align-items-center">
+                            <div class="column is-half-desktop">
+                                <div id="remodeling-dreams-construction_content">
+                                    <p
+                                            class="is-size-4 is-size-3 has-text-white has-text-weight-bold mb-2">
+                                        Remodeling Dreams Construction | Freelance
+                                    </p>
 
+                                    <p
+                                            class="text is-size-6 has-text-white mb-3 pb-2 has-text-weight-semibold"
+                                       style="width: 90%;">
+                                        A custom website designed & developed for Remodeling
+                                        Dreams Construction, a local remodeling company in
+                                        Council Bluffs, IA. Providing clients with remodeling
+                                        services from kitchen & bath to decks and patios.
+                                    </p>
+
+                                    <div class="buttons">
+                                        <a
+                                                href="https://www.remodelingdreamsconstruction.com" target="_blank"
+                                           class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                                           style="font-family: Charter;" id="custom_button">
+                                            Visit Website
+                                        </a>
+                                        <a href=""
+                                           class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                                           style="font-family: Charter;" id="custom_button">
+                                            Source Code <span class="mt-2 ml-2"><img
+                                                src="{% static 'icons/git.png' %}"></span>
+                                        </a>
+                                    </div>
+
+                                    <div class="icons is-flex is-align-content-center">
+
+                                        <img src="{% static 'icons/aws.png' %}" class="m-1">
+                                        <img src="{% static 'icons/bulma.png' %}" class="m-1">
+                                        <img src="{% static 'icons/html5.png' %}" class="m-1">
+                                        <img src="{% static 'icons/css3.png' %}" class="m-1">
+                                        <img src="{% static 'icons/js.png' %}" class="m-1">
+                                        <img src="{% static 'icons/python.png' %}" class="m-1">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-half-desktop">
+
+                                <div id="rdc_image" class="has-text-centered"
+                                     style="width: auto;">
+                                    <img src="{% static 'rdc.png' %}"
+                                         width="100%"
+                                         height="100%">
+                                </div>
+
+                            </div>
                         </div>
+
+
                     </div>
-
-
                 </div>
-
             </div>
+
+            <div id="apple-nail-salon-spa" class="mt-5">
+                <div class="columns p-5 is-centered is-mobile mt-5">
+                    <div
+                            class="column is-four-fifths-fullhd is-full-tablet is-full-mobile p-5 m-5 is-align-items-center">
+                        <div class="columns is-flex-fullhd is-align-items-center">
+                            <div class="column is-half-desktop">
+                                <div id="apple_nail_salon_content">
+                                    <p
+                                            class="is-size-4 is-size-3 has-text-white has-text-weight-bold mb-2">
+                                        Apple Nails Salon & Spa | Educational
+                                    </p>
+
+                                    <p
+                                            class="text is-size-6 has-text-white mb-3 pb-2 has-text-weight-semibold"
+                                       style="width: 90%;">
+                                        A custom online scheduling platform designed for Apple
+                                        Nail
+                                        Salon. My team was tasked with creating an online
+                                        portal
+                                        that would allow for clients to be able to schedule an
+                                        appointment with their preferred nail technician. Also
+                                        allows for management to be able to manage walk-in
+                                        clients.
+                                    </p>
+
+                                    <div class="buttons">
+
+                                        <a href=""
+                                           class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                                           style="font-family: Charter;" id="custom_button">
+                                            Source Code <span class="mt-2 ml-2"><img
+                                                src="{% static 'icons/git.png' %}">
+                            </span>
+                                        </a>
+                                    </div>
+
+                                    <div class="icons is-flex is-align-content-center">
+
+                                        <img src="{% static 'icons/bulma.png' %}" class="m-1">
+                                        <img src="{% static 'icons/html5.png' %}" class="m-1">
+                                        <img src="{% static 'icons/css3.png' %}" class="m-1">
+                                        <img src="{% static 'icons/js.png' %}" class="m-1">
+                                        <img src="{% static 'icons/python.png' %}" class="m-1">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-half-desktop">
+
+                                <div id="apple_nail_salon_image" class="has-text-centered"
+                                     style="width: auto;">
+                                    <img src="{% static 'appleNailSalon&Spa.png' %}"
+                                         width="100%"
+                                         height="100%">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
+
     </section>
 
     <section class="hero" style="background-color: black;"
@@ -314,8 +388,6 @@
                     <div id="heading">
                         <p class="title has-text-white mb-2" style="font-family: Charter;">
                             <strong>What We Provide.</strong></p>
-                        <div id="horizontal-line">
-                        </div>
 
                     </div>
 
@@ -326,15 +398,14 @@
                         Charter;">With
                             Brillante Labs we Offer a wealth of services, in order to
                             complete the A-Z process of designing and developing a website
-                            for you. Contact us below to learn more about how Brillante Labs
-                            can help you.</p>
+                            for you. You can learn more about our services below.</p>
 
                         <div id="button-container-contact-us"
                              class="has-text-centered mt-5 pb-5">
                             <a class="button is-medium has-text-white is-size-5"
-                               href="{% url 'Home:contact_me' %}"
+                               href="{% url 'Home:our_services' %}"
                                style="background-color:
-                #BAA651; border: none; font-family: Charter;"><strong>Let's Talk!</strong></a>
+                #BAA651; border: none; font-family: Charter;"><strong>Our Services</strong></a>
                         </div>
 
                     </div>
@@ -469,6 +540,47 @@
 
     </section>
 
+    <section class="hero" style="background-color: black; margin-top: 5%; margin-bottom: 5%;"
+             id="poweredBy">
+        <div class="columns mb-5">
+            <div class="column is-one-third-fullhd p-5 m-2">
+                <div class="column p-3">
+
+                    <div id="heading">
+                        <p class="title has-text-white mb-2" style="font-family: Charter;
+                    ">Powered By.</p>
+                    </div>
+
+                    <div class="column is-full p-0 mt-5">
+                        <p class="text pt-1 has-text-white has-text-weight-semibold"
+                           style="font-family: Charter;">Leveraging the power of modern
+                            technologies to bring your ideas to life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-two-thirds-fullhd">
+
+                <div class="columns is-vertical">
+
+                    <div
+                            class="column is-flex-wrap-wrap is-justify-content-center is-align-items-center	has-text-centered p-5">
+                        <div id="image_container">
+                            <img src="{% static 'mysql.png' %}" class="ml-2 mr-2">
+                            <img src="{% static 'html5.png' %}" class="ml-2 mr-2">
+                            <img src="{% static 'python.png' %}" class="ml-2 mr-2">
+                            <img src="{% static 'aws.png' %}" class="ml-2 mr-2">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <div class="columns pt-5 mt-5">
         <div class="column is-one-third has-text-centered mt-5">
@@ -504,7 +616,8 @@
 {% endblock %}
 
 {% block javascript %}
-    <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/typewriter.js' %}"></script>
 {% endblock %}
 
 

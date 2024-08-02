@@ -9,6 +9,8 @@ from django.template.loader import get_template
 def home(request):
     return render(request, "index.html")
 
+def our_services(request):
+    return render(request, "our_services.html")
 
 def our_solutions(request):
     # return all the projects from our database and pass them into template.
