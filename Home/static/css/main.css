@@ -107,6 +107,20 @@ footer {
     }
 }
 
+@keyframes projectsFade {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+
 #aboutUs {
     min-height: 65vh;
     padding-bottom: 5vh;
@@ -156,8 +170,10 @@ footer {
     font-family: "Charter";
     animation: buttonFade 3000ms ease 1 normal;
     animation-fill-mode: both;
+}
 
-
+#project_card {
+    animation: projectsFade 1500ms ease 1 normal;
 }
 
 #horizontal-line {

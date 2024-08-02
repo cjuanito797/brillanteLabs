@@ -83,10 +83,12 @@
                 <p class="text">FAQ</p>
             </a>
 
+            <!--
             <a class="navbar-item has-text-white m-5 is-size-5"
                href="{% url 'Home:our_services' %}">
                 <p class="text">Blog</p>
             </a>
+            -->
 
             <a class="navbar-item has-text-white m-5 is-size-5 is-flex is-align-items-center"
                href="{% url 'client:user_login' %}">
@@ -231,13 +233,14 @@
 
     <section class="hero" id="my_featured_projects">
 
-        <div id="featured_projects" class="mb-5">
+        <div id="featured_projects">
 
             <div id="heading" class="p-5 m-2">
                 <p class="title has-text-white"
                    style="font-family: Charter;">Our Most Recent Work.
                 </p>
             </div>
+
 
             <div id="remodeling-dreams-construction">
                 <div class="columns p-5 is-centered is-mobile">
@@ -253,7 +256,7 @@
 
                                     <p
                                             class="text is-size-6 has-text-white mb-3 pb-2 has-text-weight-semibold"
-                                       style="width: 90%;">
+                                            style="width: 90%;">
                                         A custom website designed & developed for Remodeling
                                         Dreams Construction, a local remodeling company in
                                         Council Bluffs, IA. Providing clients with remodeling
@@ -262,14 +265,19 @@
 
                                     <div class="buttons is-flex is-align-items-center">
                                         <a
-                                                href="https://www.remodelingdreamsconstruction.com" target="_blank"
-                                           class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
-                                           style="font-family: Charter;" id="custom_button">
+                                                href="https://www.remodelingdreamsconstruction.com"
+                                                target="_blank"
+                                                class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                                                style="font-family: Charter;"
+                                                id="custom_button">
                                             Visit Website
                                         </a>
-                                        <a href=""
-                                           class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
-                                           style="font-family: Charter;" id="custom_button">
+                                        <a
+                                                href="https://github.com/cjuanito797/RemodelingDreamsConstruction"
+                                                target="_blank"
+                                                class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                                                style="font-family: Charter;"
+                                                id="custom_button">
                                             Source Code <span class="mt-2 ml-2"><img
                                                 src="{% static 'icons/git.png' %}"></span>
                                         </a>
@@ -303,6 +311,35 @@
 
                     </div>
                 </div>
+
+                <div id="testimonial"
+                     class="columns is-centered is-mobile">
+                    <div
+                            class="column is-one-third-fullhd is-two-thirds-tablet is-four-fifths-mobile has-text-centered">
+
+                        <p
+                                class="text has-text-weight-bold has-text-white is-size-6">
+                            "Juan has been fantastic to work with and quite frankly a Godsend.
+                            His timing all through the website project and additional services
+                            has been just at the exact time we have needed and spot on. His
+                            attention to detail and ability to design such integrate detail is
+                            nothing short of amazing. He is always expedient to respond to the
+                            needs and has great ideas to resolve the matters. Appreciate what
+                            he continues to do to further our business needs. "
+                        </p>
+
+                        <p class="text has-text-weight-bold has-text-white is-size-6 mt-4">
+                            - Kari
+                        </p>
+
+                        <div class="hr mt-4" style="width: 75%; margin-left: 12%; border: 1px
+                        solid
+                                #9F8B3B; opacity: 1;"></div>
+                    </div>
+
+                </div>
+
+
             </div>
 
             <div id="apple-nail-salon-spa" class="mt-5">
@@ -319,7 +356,7 @@
 
                                     <p
                                             class="text is-size-6 has-text-white mb-3 pb-2 has-text-weight-semibold"
-                                       style="width: 90%;">
+                                            style="width: 90%;">
                                         A custom online scheduling platform designed for Apple
                                         Nail
                                         Salon. My team was tasked with creating an online
@@ -332,7 +369,8 @@
 
                                     <div class="buttons">
 
-                                        <a href=""
+                                        <a href="https://github.com/cjuanito797/NailSalon"
+                                           target="_blank"
                                            class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
                                            style="font-family: Charter;" id="custom_button">
                                             Source Code <span class="mt-2 ml-2"><img
@@ -373,6 +411,13 @@
 
         </div>
 
+        <div class="column has-text-centered">
+            <a href="{% url 'Home:our_solutions' %}"
+               class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+               style="font-family: Charter;" id="custom_button">
+                Our Projects
+            </a>
+        </div>
 
     </section>
 
@@ -387,7 +432,7 @@
 
                     <div id="heading">
                         <p class="title has-text-white mb-2" style="font-family: Charter;">
-                            <strong>What We Provide.</strong></p>
+                            <strong>What I Can Provide.</strong></p>
 
                     </div>
 
@@ -395,18 +440,21 @@
                     <div class="column is-four-fifths-fullhd p-0 mt-5">
                         <p class="text pt-1 has-text-white has-text-weight-semibold"
                            style="font-family:
-                        Charter;">With
-                            Brillante Labs we Offer a wealth of services, in order to
-                            complete the A-Z process of designing and developing a website
-                            for you. You can learn more about our services below.</p>
+                        Charter;">I provide a plenitude of services, in order to create
+                            full stack web applications. I am versed in many different
+                            technologies.</p>
 
+                        <!--
                         <div id="button-container-contact-us"
                              class="has-text-centered mt-5 pb-5">
                             <a class="button is-medium has-text-white is-size-5"
+                               id="custom_button"
                                href="{% url 'Home:our_services' %}"
                                style="background-color:
                 #BAA651; border: none; font-family: Charter;"><strong>Our Services</strong></a>
                         </div>
+
+                        -->
 
                     </div>
                 </div>
