@@ -119,6 +119,29 @@ footer {
     }
 }
 
+@keyframes scroll-down-animation {
+    0% {
+        opacity: 1;
+
+    }
+
+    25% {
+        transform: translateY(25%);
+        opacity: 0.5;
+
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
+#scroll-down {
+    animation: scroll-down-animation 1500ms infinite;
+}
+
 
 
 #aboutUs {
@@ -146,8 +169,8 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-resize: cover;
-    min-height: 75vh;
-    max-height: 75vh;
+    min-height: 80vh;
+    max-height: 80vh;
 }
 
 .box {
