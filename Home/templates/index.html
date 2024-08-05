@@ -182,7 +182,7 @@
         </div>
 
         <footer class="has-text-centered" style="background-color: transparent;">
-                    <img src="{% static 'scroll-down.png' %}" id="scroll-down">
+            <img src="{% static 'scroll-down.png' %}" id="scroll-down">
 
         </footer>
 
@@ -195,7 +195,7 @@
             <div class="column is-one-third-fullhd is-half-tablet is-full-mobile
             has-text-left
             p-5 m-2">
-                <div class="column p-3 mt-1">
+                <div class="column p-3 mt-1" id="about_me_summary">
 
                     <div id="heading">
                         <p class="title has-text-white mb-2"
@@ -229,7 +229,9 @@
             </div>
 
 
-            <div class="column is-two-thirds-fullhd is-half-tablet p-5 m-2 has-text-centered">
+            <div
+                    class="column is-two-thirds-fullhd is-half-tablet p-5 m-2 has-text-centered"
+                    id="about_me_image">
                 <img src="{% static 'me_cartoon.png' %}" width="450" height="450"
                      style="position: relative;">
             </div>
@@ -637,7 +639,7 @@
     </section>
 
 
-    <div class="columns pt-5 mt-5">
+    <div class="columns pt-5 mt-5 pb-5 mb-5">
         <div class="column is-one-third has-text-centered mt-5">
             <p class="title has-text-white">3+</p>
             <p class="title has-text-white">Satisfied Clients</p>
@@ -663,10 +665,45 @@
 {% endblock %}
 {% block footer %}
 
-<footer class="footer has-text-centered pb-2" style="background-color: black;">
+<footer class="footer has-text-centered pb-2 pt-5" style="background-color: #1B1C1E;">
+    <div class="columns is-centered is-mobile">
+        <div class="column is-three-fourths-desktop is-full-mobile">
+            <p class="text has-text-white has-text-weight-bold pb-3">Check Me Out On: </p>
+
+            <div id="social_media_links is-flex">
+
+                <a href="https://www.linkedin.com/in/juan-lizarraga-cortez-292942199?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BiwsrOUNYSU2Eaav62jyEMA%3D%3D" target="_blank">
+                    <img src="{% static 'linkedin.png' %}" class="m-2">
+                </a>
+
+                <a href="https://github.com/cjuanito797" target="_blank">
+                    <img src="{% static 'github.png' %}" class="m-2">
+                </a>
+
+                <a href="https://www.instagram.com/juan.lizarraga.9/" target="_blank">
+                    <img src="{% static 'instagram.png' %}" class="m-2">
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
     <div id="branding">
         <p class="text has-text-white has-text-weight-bold m-0">@ Code By Juan</p>
     </div>
+
+    <div class="bottom-accent has-text-centered pt-5 pb-3">
+        <div class="hr" style="width: 50%; border: 2px solid
+                                #9F8B3B; margin-left: 25%;"></div>
+
+    </div>
+
 </footer>
 {% endblock %}
 
