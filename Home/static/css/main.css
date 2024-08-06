@@ -157,7 +157,7 @@ footer {
 
 @keyframes scroll-down-animation {
     0% {
-        opacity: 1 !important;
+        opacity: 1;
 
     }
 
@@ -179,7 +179,7 @@ footer {
 }
 
 #scroll-down.disappear {
-    visibility: hidden !important;
+    visibility: hidden;
 }
 
 
