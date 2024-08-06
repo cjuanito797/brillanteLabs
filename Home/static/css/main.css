@@ -175,7 +175,7 @@ footer {
 }
 
 #scroll-down {
-    animation: scroll-down-animation 1500ms infinite !important;
+    animation: scroll-down-animation 1500ms infinite;
 }
 
 #scroll-down.disappear {
