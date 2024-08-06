@@ -15,7 +15,7 @@ function about_me_func(entries) {
 }
 
 const aboue_me_options = {
-    threshold: 1,
+    threshold: 0.75,
 }
 
 const about_me_obs = new IntersectionObserver(about_me_func, aboue_me_options);
