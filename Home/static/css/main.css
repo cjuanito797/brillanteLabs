@@ -276,7 +276,7 @@ footer {
 
 #service_cards.active {
     opacity: 1;
-    animation: projectsFade 1250ms ease-in;
+    animation: projectsFade 1500ms ease-in;
 }
 
 #horizontal-line {
