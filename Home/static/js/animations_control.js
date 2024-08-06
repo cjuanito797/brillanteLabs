@@ -1,7 +1,7 @@
 const testimonial = document.querySelector("#testimonial-rdc");
 const about_me_summary = document.querySelector("#about_me_summary");
 const aboue_me_image = document.querySelector("#about_me_image");
-const service_cards = document.querySelector("#service_cards");
+//const service_cards = document.querySelector("#service_cards");
 
 // Intersection observer for the about me summary.
 function about_me_func(entries) {
@@ -41,6 +41,7 @@ const testimonial_options = {
 const testimonial_rdc_obs = new IntersectionObserver(testimonial_rdc_func, testimonial_options);
 testimonial_rdc_obs.observe(testimonial);
 
+/*
 // Intersection observer for the skills cards section.
 function service_cards_func(entries) {
 
@@ -58,3 +59,5 @@ const service_cards_options = {
 
 const service_cards_obs = new IntersectionObserver(service_cards_func, service_cards_options);
 service_cards_obs.observe(service_cards);
+
+*/
