@@ -35,7 +35,7 @@ function testimonial_rdc_func(entries) {
 }
 
 const testimonial_options = {
-    threshold: 0.95,
+    threshold: 0.65,
 }
 
 const testimonial_rdc_obs = new IntersectionObserver(testimonial_rdc_func, testimonial_options);
