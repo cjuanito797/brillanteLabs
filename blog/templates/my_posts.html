@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block mainbody %}
+
+<div id="top_padding" style="margin-top: 10vh;">
+</div>
+
+<section class="hero">
+    <div class="columns is-centered is-mobile">
+        <div class="column is-three-quarters-fullhd is-half-tablet is-full-mobile p-5 m-5 is-align-items-center">
+
+            <h1 class="title has-text-white has-text-weight-bold is-size-2 has-text-centered">
+                See What I Have To Say Below</h1>
+        </div>
+
+
+    </div>
+
+
+    {% for blog in blogs %}
+
+
+    <div
+            class="columns is-centered is-mobile p-5 m-0">
+
+
+            <div
+                    class="column is-three-quarters-desktop is-three-quarters-fullhd is-four-fifths-tablet is-full-mobile">
+
+                <a href="{{blog.get_absolute_url}}">
+
+                <div class="box is-flex-fullhd is-align-items-center p-5" id="blog-post">
+
+                    <div id="image" class="has-text-centered">
+
+                        <img src="/media/{{blog.image}}" width="450" height="250">
+                    </div>
+
+                    <div id="text-content" class=" p-2 has-text-centered" style="width:
+                    100%;">
+                        <h1 class="title is-size-4 has-text-white m-2">{{blog.title}}</h1>
+                        <p class="text is-size-5 has-text-white m-2">{{blog.description}}</p>
+                        <p class="text has-text-centered">{{blog.date_posted}}</p>
+                    </div>
+
+
+                </div>
+                </a>
+
+
+            </div>
+
+
+
+    </div>
+
+
+    {% endfor %}
+
+</section>
+
+
+{% endblock %}
+
+
+{% block javascript %}
+
+<script src="{% static 'js/navbar_change.js' %}"></script>
+
+{% endblock %}

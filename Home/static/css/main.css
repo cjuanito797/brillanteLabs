@@ -350,6 +350,10 @@ footer {
     opacity: 0.75;
 }
 
+#blog-post:hover {
+    opacity: 0.75;
+}
+
 #tabs::after {
     content: '';
     position: absolute;
