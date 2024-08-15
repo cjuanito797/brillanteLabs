@@ -100,7 +100,7 @@ footer {
 
 @keyframes leftContentFade {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
         opacity: 0;
     }
 
@@ -112,7 +112,7 @@ footer {
 
 @keyframes rightContentFade {
     0% {
-        transform: translateX(100%);
+        transform: translateX(200%);
         opacity: 0;
     }
 
@@ -184,8 +184,9 @@ footer {
 
 
 #aboutUs {
-    min-height: 65vh;
-    padding-bottom: 5vh;
+    margin-top: 12vh;
+    padding-bottom: 15vh;
+
 }
 
 #about_me_summary {
@@ -193,7 +194,7 @@ footer {
 }
 
 #about_me_summary.active {
-    animation: leftContentFade 1s ease-in-out;
+    animation: leftContentFade 1500ms ease-in-out;
     opacity: 1;
 }
 
@@ -202,7 +203,7 @@ footer {
 }
 
 #about_me_image.active {
-    animation: rightContentFade 1s ease-in-out;
+    animation: rightContentFade 1500ms ease-in-out;
     opacity: 1;
 }
 

@@ -7,5 +7,6 @@ app_name = 'blog'
 urlpatterns = [
     path('myPosts/', views.myPosts, name='my_posts'),
     path('content/<int:pk>/<slug:slug>/', views.blog_content, name='blog_content'),
+    path('send/', views.test_send_email, name='test_send_email')
 
 ]
