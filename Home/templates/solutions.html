@@ -56,13 +56,14 @@
 <section class="hero" id="our_work">
     <div class="p-3 columns is-centered-mobile is-centered-tablet is-centered-fullhd
         is-mobile
-        is-flex-wrap-wrap is-justify-content-left-fullhd">
+        is-flex-wrap-wrap is-justify-content-left-fullhd is-justify-content-center mt-5">
 
         <!-- for each project create a responsive card -->
         <!-- two-fifths for fullhd, four-fifths-tablet, and full for mobile -->
         {% for project in projects %}
         <div class="column is-one-quarter-fullhd is-two-fifths-widescreen
-                is-two-fifths-desktop is-half-tablet is-full-mobile" id="project_card">
+                is-two-fifths-desktop is-half-tablet is-full-mobile"
+             id="project_card">
 
             <a href="{{ project.get_absolute_url }}" id="project">
                 <div class="card m-3" id="project" style="background-color:
@@ -71,10 +72,11 @@
                     1%;">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img
-                                    src="/media/{{ project.thumbnail }}"
-                                    alt="Placeholder image"
-                            />
+                            <div class="blur-load">
+
+                                <img src="/media/{{ project.thumbnail }}"
+                                        alt="Placeholder image" loading="lazy"/>
+                            </div>
                         </figure>
                     </div>
                     <div class="card-content p-5">
@@ -128,5 +130,5 @@
 {% endblock %}
 
 {% block javascript %}
-    <script src="{% static 'js/navbar_change.js' %}"></script>
+<script src="{% static 'js/navbar_change.js' %}"></script>
 {% endblock %}
