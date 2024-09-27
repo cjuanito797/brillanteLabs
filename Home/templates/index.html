@@ -20,7 +20,8 @@
 
     <link rel="preload" fetchpriority="high" as="image" href="{% static 'Background/JPEG/AdobeStock_724882815.avif' %}"
           type="image/avif">
-    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link fetchpriority="high" href="{% static 'css/main.css' %}" rel="stylesheet"
+          type="text/css">
     <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" type="text/css">
 
 </head>
