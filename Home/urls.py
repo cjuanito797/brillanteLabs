@@ -14,5 +14,6 @@ urlpatterns = [
     path("aboutMe/", views.about_me, name="about_me"),
     path("contactMe/", views.contact_me, name="contact_me"),
     path("services/", views.our_services, name="our_services"),
+    path("myTranslator/", views.translator_hype, name="translator_hype"),
 
 ]

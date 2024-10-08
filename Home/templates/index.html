@@ -19,7 +19,8 @@
     <script fetchpriority="low"
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <link rel="preload" fetchpriority="high" as="image" href="{% static 'Background/JPEG/AdobeStock_724882815.avif' %}"
+    <link rel="preload" fetchpriority="high" as="image"
+          href="{% static 'Background/JPEG/AdobeStock_724882815.avif' %}"
           type="image/avif">
     <link fetchpriority="high" href="{% static 'css/main.css' %}" rel="stylesheet"
           type="text/css">
@@ -134,6 +135,20 @@
                            class="has-text-weight-bold"><strong>Let's Talk!</strong></p>
                         <img src="{% static 'ai.png' %}" class="ml-2"
                              alt="image of a circuit brain.">
+                    </a>
+
+
+                </div>
+            </div>
+
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button m-5 is-size-5 p-5" style="background: linear-gradient(180deg, rgba(57,69,79,1) 0%, rgba(12,91,170,1) 7%, rgba(157,238,255,1) 77%);
+ border: none;" href="{% url 'Home:translator_hype' %}">
+                        <p id="translator_hype_text" style="color: white; font-weight:
+                        bolder"><strong>My Translator</strong></p>
+                        <img src="{% static 'icons8-translator-50.png' %}" class="ml-2"
+                             alt="image of a translator icon.">
                     </a>
                 </div>
             </div>
@@ -408,7 +423,7 @@
 
                                     <div class="icons is-flex-tablet is-align-content-center">
 
-                                        <img loading ="lazy"
+                                        <img loading="lazy"
                                              src="{% static 'icons/bulma.png' %}"
                                              class="m-1">
                                         <img loading="lazy"
@@ -516,7 +531,8 @@
                                 'Charter';">Development</p>
                                 <p class="has-text-white mr-5" style="font-family:
                                 'Charter';">Have a feature in mind
-                                    for your website? With the technology powering "Code By Juan"
+                                    for your website? With the technology powering "Code By
+                                    Juan"
                                     we have the autonomy and creative space to freely explore
                                     ideas and implement solutions. </p>
                             </div>
@@ -692,8 +708,9 @@
 
 </main>
 {% endblock %}
-{% block footer %}
 
+
+{% block footer %}
 <footer class="footer has-text-centered pb-2 pt-5" style="background-color: #BAA651;">
     <div class="columns is-centered is-mobile">
         <div class="column is-three-fourths-desktop is-full-mobile">
@@ -715,7 +732,7 @@
                 </a>
 
                 <a target="_blank"
-                        href="https://www.google.com/search?q=code+by+juan&client=safari&sca_esv=adb58b67ff5950fb&sca_upv=1&sxsrf=ADLYWIL7oxu80I7tKVQjemEdyImKIPLtyQ%3A1727370211361&source=hp&ei=45P1ZvW4E7HdwN4Pt7bYKQ&iflsig=AL9hbdgAAAAAZvWh806am7cKXUiMIZ93aOUoIClFf2DW&ved=0ahUKEwi1tt2-i-GIAxWxLtAFHTcbNgUQ4dUDCBk&uact=5&oq=code+by+juan&gs_lp=Egdnd3Mtd2l6GgIYASIMY29kZSBieSBqdWFuMgQQIxgnMgYQABgWGB4yBhAAGBYYHjICECYyCxAAGIAEGIYDGIoFMg4QABiABBiGAxiKBRiLA0jZWFAAWLVXcAF4AJABAJgBmAGgAZALqgEDNS44uAEDyAEA-AEBmAINoAL0CqgCCsICBBAAGAPCAg4QABiABBixAxiDARiKBcICBxAjGCcY6gLCAgoQIxiABBgnGIoFwgILEAAYgAQYkQIYigXCAgoQABiABBhDGIoFwgIREC4YgAQYkQIY0QMYxwEYigXCAgsQABiABBixAxiDAcICCxAuGIAEGJECGIoFwgILEC4YgAQYsQMYgwHCAg4QLhiABBixAxjRAxjHAcICBRAAGIAEwgINEC4YgAQYsQMYQxiKBcICFhAuGIAEGLEDGNEDGIMBGBQYhwIYxwHCAgoQLhiABBhDGIoFwgIIEAAYgAQYsQPCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgINEC4YgAQYsQMYFBiHAsICERAuGIAEGLEDGNEDGIMBGMcBwgILEC4YgAQYxwEYrwHCAg0QABiABBixAxgUGIcCwgILEC4YgAQYsQMY1ALCAgUQLhiABMICCBAAGBYYChgemAMIkgcEMi4xMaAH734&sclient=gws-wiz">
+                   href="https://www.google.com/search?q=code+by+juan&client=safari&sca_esv=adb58b67ff5950fb&sca_upv=1&sxsrf=ADLYWIL7oxu80I7tKVQjemEdyImKIPLtyQ%3A1727370211361&source=hp&ei=45P1ZvW4E7HdwN4Pt7bYKQ&iflsig=AL9hbdgAAAAAZvWh806am7cKXUiMIZ93aOUoIClFf2DW&ved=0ahUKEwi1tt2-i-GIAxWxLtAFHTcbNgUQ4dUDCBk&uact=5&oq=code+by+juan&gs_lp=Egdnd3Mtd2l6GgIYASIMY29kZSBieSBqdWFuMgQQIxgnMgYQABgWGB4yBhAAGBYYHjICECYyCxAAGIAEGIYDGIoFMg4QABiABBiGAxiKBRiLA0jZWFAAWLVXcAF4AJABAJgBmAGgAZALqgEDNS44uAEDyAEA-AEBmAINoAL0CqgCCsICBBAAGAPCAg4QABiABBixAxiDARiKBcICBxAjGCcY6gLCAgoQIxiABBgnGIoFwgILEAAYgAQYkQIYigXCAgoQABiABBhDGIoFwgIREC4YgAQYkQIY0QMYxwEYigXCAgsQABiABBixAxiDAcICCxAuGIAEGJECGIoFwgILEC4YgAQYsQMYgwHCAg4QLhiABBixAxjRAxjHAcICBRAAGIAEwgINEC4YgAQYsQMYQxiKBcICFhAuGIAEGLEDGNEDGIMBGBQYhwIYxwHCAgoQLhiABBhDGIoFwgIIEAAYgAQYsQPCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgINEC4YgAQYsQMYFBiHAsICERAuGIAEGLEDGNEDGIMBGMcBwgILEC4YgAQYxwEYrwHCAg0QABiABBixAxgUGIcCwgILEC4YgAQYsQMY1ALCAgUQLhiABMICCBAAGBYYChgemAMIkgcEMi4xMaAH734&sclient=gws-wiz">
                     <img loading="lazy" src="{% static 'icons8-google-48.png' %}" class="m-2">
                 </a>
             </div>

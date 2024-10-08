@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification"
+          content="pKEmhkGIUvN9zvKPCbeiwEc9XsDbcOfJzEexyQMxhsc"/>
+    <title>Code By Juan </></title>
+
+    <link rel="icon" href="{% static 'icons8-idea-40.png' %}">
+
+    <link fetchpriority="high" rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script fetchpriority="low"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <link fetchpriority="high" href="{% static 'css/translator.css' %}" rel="stylesheet"
+          type="text/css">
+    <link fetchpriority="low" href="{% static 'css/lightbox.css' %}" rel="stylesheet"
+          type="text/css">
+
+</head>
+
+
+<body>
+
+<nav class="navbar pt-1 is-align-items-center is-fixed-top" role="navigation"
+     aria-label="main navigation" id="navbar">
+    <div class="navbar-brand">
+
+        <a class="navbar-item-brand is-size-2 is-size-2-mobile has-text-white is-flex is-align-items-center"
+           href=
+                   "{% url 'Home:home' %}"
+           style="font-family: hyperion; margin-left: 3vw;">
+            <p class="text"><strong>Code By Juan</strong></p>
+            <img src="{% static 'bulb.png' %}" width="50" height="50" alt="picture of a bulb">
+
+
+        </a>
+
+
+        <a role="button" class="navbar-burger mt-1" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample" style="background-color: transparent;">
+            <span aria-hidden="true" style="color: white; height: 2px; width: 20px;"></span>
+            <span aria-hidden="true" style="color: white; height: 2px; width: 20px;"></span>
+            <span aria-hidden="true" style="color: white; height: 2px; width: 20px;"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+
+        </div>
+
+        <div class="navbar-end mr-5">
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:about_me' %}">
+                <p class="text">About Me</p>
+            </a>
+
+
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:our_solutions' %}">
+                <p class="text">Project Showcase</p>
+            </a>
+
+
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:FAQ' %}">
+                <p class="text">FAQ</p>
+            </a>
+
+            <!--
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'Home:our_services' %}">
+                <p class="text">Blog</p>
+            </a>
+            -->
+
+            <a class="navbar-item has-text-white m-5 is-size-5 is-flex is-align-items-center"
+               href="{% url 'blog:my_posts' %}">
+                <p class="text">Blog</p>
+                &nbsp;
+
+            </a>
+
+            <!--
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-white m-5 is-size-5">
+                    More
+                </a>
+
+                <div class="navbar-dropdown" style="background-color: black;">
+                    <a class="navbar-item has-text-white m-5 is-size-5">
+                        Blog
+                    </a>
+                    <a class="navbar-item has-text-white m-5 is-size-5">
+                        Testimonials
+                    </a>
+
+                    <hr class="navbar-divider">
+                    <a class="navbar-item has-text-white m-5 is-size-5">
+                        Report an issue
+                    </a>
+                </div>
+            </div>
+            -->
+
+            <div class="navbar-item">
+                <div class="buttons">
+
+                    <a class="button has-text-white m-5 is-size-5 p-5
+                has-text-weight-bold" id="contact_me_button"
+                       href="{% url 'Home:contact_me' %}"
+                       style="border: none; font-family: Charter;">
+                        <p id="contact_us_text" style="color: #BAA651; font-weight: bolder;"
+                           class="has-text-weight-bold"><strong>Let's Talk!</strong></p>
+                        <img src="{% static 'ai.png' %}" class="ml-2"
+                             alt="image of a circuit brain.">
+                    </a>
+
+
+                </div>
+            </div>
+
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button m-5 is-size-5 p-5" style="background: linear-gradient(180deg, rgba(57,69,79,1) 0%, rgba(12,91,170,1) 7%, rgba(157,238,255,1) 77%);
+ border: none;" href="{% url 'Home:translator_hype' %}">
+                        <p id="translator_hype_text" style="color: white; font-weight:
+                        bolder"><strong>My Translator</strong></p>
+                        <img src="{% static 'icons8-translator-50.png' %}" class="ml-2"
+                             alt="image of a translator icon.">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</nav>
+
+<main id="main">
+
+    <section class="hero" id="callToAction"></section>
+
+    <section class="hero" id="join_now">
+
+        <div class="columns">
+            <div class="column is-half p-5 m-5">
+                <h1 class="title is-size-2 has-text-white has-text-weight-bold pt-5 mt-5">A new
+                    digital tool for translating your digital documents.</h1>
+                <p class="text is-size-5 has-text-white has-text-weight-bold">We aim to
+                    provide you a digital tool for transforming the way you perform
+                    translation by utilizing modern technologies. We can provide you with
+                    fast, efficient and accurate translations for your digital documents,
+                    all while preserving format.</p>
+
+                <form method="post" class="pt-5 mt-5 has-text-centered">
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left has-icons-right ">
+                            <input class="input p-5" type="email" required
+                                   placeholder="Email Address" name="email" id="email"
+                                   style="background-color: white; opacity: 0.5; color: black;
+                                           font-weight: bold; border-radius: 15px;">
+
+
+                        </p>
+                    </div>
+
+                    <button class="button is-medium p-5 has-text-white"
+                            type="submit" required
+                            style="font-family: Charter;
+                                            background: linear-gradient(180deg, rgba(57,69,79,1) 0%, rgba(12,91,170,1) 7%, rgba(157,238,255,1) 77%); border: none;">
+                        <strong>Join Now</strong></button>
+                </form>
+            </div>
+
+            <div class="column is-half has-text-centered mr-5 p-5">
+                <img src="{% static 'translator_hype_hero.avif' %}" width="550" height="550">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="hero" id="appVirtues">
+
+
+        <div class="columns is-mobile is-centered is-flex-wrap-wrap p-4">
+
+            <div
+                    class="column is-one-quarter-fullhd is-one-third-desktop is-three-fifths-tablet is-four-fifths-mobile">
+                <div class="card p-5 m-5" style="background: rgba(255, 255, 255, 0.3);">
+                    <div class="card-header is-shadowless">
+                        <p
+                                class="card-header-title is-centered is-size-4 has-text-white has-text-weight-bold has-text-white">
+                            <strong
+                                    class="has-text-white">Comprehensive</strong></p>
+
+                    </div>
+
+                    <div class="card-content p-5" style="height: 25vh;">
+
+                        <div class="has-text-centered p-2">
+                            <img src="{% static 'icons8-light-50.png' %}" style="opacity: 1;"
+                                 class="has-text-centered">
+                        </div>
+
+                        <p class="text has-text-weight-bold"><strong
+                                class="has-text-white">Our Application
+                            is able to translate
+                            multiple languages,
+                            as well as work in
+                            multiple formats such
+                            as (PPTX, Doc, TXT).</strong></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div
+                    class="column is-one-quarter-fullhd is-one-third-desktop is-three-fifths-tablet is-four-fifths-mobile">
+                <div class="card p-5 m-5" style="background: rgba(255, 255, 255, 0.3);">
+                    <div class="card-header is-shadowless">
+                        <p
+                                class="card-header-title is-centered is-size-4 has-text-white has-text-weight-bold">
+                            <strong
+                                    class="has-text-white">Accurate</strong></p>
+                    </div>
+
+                    <div class="card-content p-5" style="height: 25vh;">
+
+                        <div class="has-text-centered p-2">
+                            <img src="{% static 'icons8-goal-50.png' %}"
+                                 class="has-text-centered">
+                        </div>
+                        <p class="text has-text-weight-bold"><strong
+                                class="has-text-white">Our
+                            application aims
+                            to provide you with
+                            the most accurate of
+                            translations, making your life easier.</strong></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div
+                    class="column is-one-quarter-fullhd is-one-third-desktop is-three-fifths-tablet is-four-fifths-mobile">
+                <div class="card p-5 m-5" style="background: rgba(255, 255, 255, 0.3);">
+                    <div class="card-header is-shadowless">
+                        <p
+                                class="card-header-title is-centered is-size-4 has-text-white has-text-weight-bold">
+                            <strong
+                                    class="has-text-white">Fast</strong></p>
+                    </div>
+
+                    <div class="card-content p-5" style="height: 25vh;">
+                        <div class="has-text-centered">
+                            <img src="{% static 'icons8-conflict-50.png' %}"
+                                 class="has-text-centered p-2">
+                        </div>
+
+                        <p class="text has-text-weight-bold"><strong
+                                class="has-text-white">Our application is able
+                            to quickly translate
+                            your digital documents.</strong></p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="hero pt-5 mt-5" id="tech_stack">
+
+        <div class="has-text-centered mb-3">
+            <h1
+                    class="title is-size-2 has-text-weight-bold has-text-white">Powered By</h1>
+        </div>
+
+        <div class="flex has-text-centered">
+            <img src="{% static 'icons8-python-96.png' %}" loading="lazy" class="m-3">
+            <img src="{% static 'icons8-aws-96.png' %}" loading="lazy" class="m-3">
+            <img src="{% static 'icons8-html5-96.png' %}" loading="lazy" class="m-3">
+            <img src="{% static 'icons8-css3-96.png' %}" loading="lazy" class="m-3">
+            <img src="{% static 'icons8-javascript-96.png' %}" loading="lazy" class="m-3">
+            <img src="{% static 'icons8-google-translate-96.png' %}" loading="lazy"
+                 class="m-3">
+        </div>
+    </section>
+
+    <section class="hero" id="callToAction"></section>
+
+
+</main>
+
+
+{% block footer %}
+<footer class="footer has-text-centered pb-2 pt-5" style="background-color: transparent;">
+    <div class="columns is-centered is-mobile">
+        <div class="column is-three-fourths-desktop is-full-mobile">
+            <p class="text has-text-white has-text-weight-bold pb-3">Check Me Out On: </p>
+
+            <div id="social_media_links is-flex">
+
+                <a href="https://www.linkedin.com/in/juan-lizarraga-cortez-292942199?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BiwsrOUNYSU2Eaav62jyEMA%3D%3D"
+                   target="_blank">
+                    <img loading="lazy" src="{% static 'linkedin.png' %}" class="m-2">
+                </a>
+
+                <a href="https://github.com/cjuanito797" target="_blank">
+                    <img loading="lazy" src="{% static 'github.png' %}" class="m-2">
+                </a>
+
+                <a href="https://www.instagram.com/juan.lizarraga.9/" target="_blank">
+                    <img loading="lazy" src="{% static 'instagram.png' %}" class="m-2">
+                </a>
+
+                <a target="_blank"
+                   href="https://www.google.com/search?q=code+by+juan&client=safari&sca_esv=adb58b67ff5950fb&sca_upv=1&sxsrf=ADLYWIL7oxu80I7tKVQjemEdyImKIPLtyQ%3A1727370211361&source=hp&ei=45P1ZvW4E7HdwN4Pt7bYKQ&iflsig=AL9hbdgAAAAAZvWh806am7cKXUiMIZ93aOUoIClFf2DW&ved=0ahUKEwi1tt2-i-GIAxWxLtAFHTcbNgUQ4dUDCBk&uact=5&oq=code+by+juan&gs_lp=Egdnd3Mtd2l6GgIYASIMY29kZSBieSBqdWFuMgQQIxgnMgYQABgWGB4yBhAAGBYYHjICECYyCxAAGIAEGIYDGIoFMg4QABiABBiGAxiKBRiLA0jZWFAAWLVXcAF4AJABAJgBmAGgAZALqgEDNS44uAEDyAEA-AEBmAINoAL0CqgCCsICBBAAGAPCAg4QABiABBixAxiDARiKBcICBxAjGCcY6gLCAgoQIxiABBgnGIoFwgILEAAYgAQYkQIYigXCAgoQABiABBhDGIoFwgIREC4YgAQYkQIY0QMYxwEYigXCAgsQABiABBixAxiDAcICCxAuGIAEGJECGIoFwgILEC4YgAQYsQMYgwHCAg4QLhiABBixAxjRAxjHAcICBRAAGIAEwgINEC4YgAQYsQMYQxiKBcICFhAuGIAEGLEDGNEDGIMBGBQYhwIYxwHCAgoQLhiABBhDGIoFwgIIEAAYgAQYsQPCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgINEC4YgAQYsQMYFBiHAsICERAuGIAEGLEDGNEDGIMBGMcBwgILEC4YgAQYxwEYrwHCAg0QABiABBixAxgUGIcCwgILEC4YgAQYsQMY1ALCAgUQLhiABMICCBAAGBYYChgemAMIkgcEMi4xMaAH734&sclient=gws-wiz">
+                    <img loading="lazy" src="{% static 'icons8-google-48.png' %}" class="m-2">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="branding">
+        <p class="text has-text-white has-text-weight-bold m-0">@ Code By Juan</p>
+    </div>
+
+    <div class="bottom-accent has-text-centered pt-5 pb-3">
+        <div class="hr" style="width: 50%; border: 2px solid
+                                white; margin-left: 25%;"></div>
+
+    </div>
+
+</footer>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/typewriter.js' %}"></script>
+<script src="{% static 'js/animations_control.js' %}"></script>
+{% endblock %}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function () {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+
+        });
+    });
+
+</script>
+
+</body>
+</html>

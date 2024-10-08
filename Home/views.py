@@ -9,6 +9,9 @@ from django.template.loader import get_template
 def home(request):
     return render(request, "index.html")
 
+def translator_hype(request):
+    return render(request, "translator_hype.html")
+
 def our_services(request):
     return render(request, "our_services.html")
 

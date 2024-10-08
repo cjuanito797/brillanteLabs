@@ -1,0 +1,395 @@
+/*removes default margin & padding*/
+html, body {
+    padding: 0px !important;
+    margin: 0px !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth !important;
+    background: black;
+    min-height: 100%;
+
+}
+
+html {
+    height: 100%;
+}
+
+/*sets body height to max; and allows scrollbar as page content grows*/
+body {
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    background-image: url("../../static/Background/AdobeStock_76567808.avif");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-resize: cover;
+
+}
+
+input, select, textarea{
+    color: black;
+    font-weight: bold;
+}
+
+textarea[id="content"]::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+
+input[type="email"]::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+input[type="text"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    color: white;
+    font-weight: bold;
+}
+
+input[type="tel"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    bottom: 0;
+    margin-top: auto;
+    background-color: black;
+    vertical-align: top;
+    overflow: hidden;
+    width: 100%;
+}
+
+#cursor {
+    color: #BAA651;
+    animation: blink 1s linear infinite;
+
+  }
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+}
+
+@keyframes textFade {
+
+    0% {
+
+        transform: translateX(-100%);
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+
+    }
+}
+
+@keyframes testimonialFade {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes leftContentFade {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes rightContentFade {
+    0% {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonFade {
+
+    0% {
+
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+
+    }
+}
+
+@keyframes projectsFade {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-down-animation {
+    0% {
+        opacity: 1;
+
+    }
+
+    25% {
+        transform: translateY(25%);
+        opacity: 0.5;
+
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
+#scroll-down {
+    animation: scroll-down-animation 1500ms infinite;
+}
+
+#scroll-down.disappear {
+    visibility: hidden;
+}
+
+
+#aboutUs {
+    margin-top: 12vh;
+    padding-bottom: 15vh;
+
+}
+
+#about_me_summary {
+    opacity: 0;
+}
+
+#about_me_summary.active {
+    animation: leftContentFade 1500ms ease-in-out;
+    opacity: 1;
+}
+
+#about_me_image {
+    opacity: 0;
+}
+
+#about_me_image.active {
+    animation: rightContentFade 1500ms ease-in-out;
+    opacity: 1;
+}
+
+#my_featured_projects {
+    min-height: 65vh;
+    padding-bottom: 10vh;
+}
+
+#custom_button {
+    background: linear-gradient(90deg, rgba(198,194,27,1) 0%, rgba(242,136,9,1) 100%);
+    border: none;
+    font-family: Charter;
+    font-weight: bold;
+
+}
+
+#callToAction {
+    min-height: 15vh;
+    max-height: 15vh;
+}
+
+#spacing {
+    min-height: 5vh;
+    max-height: 5vh;
+}
+
+.box {
+    background-color: #1B1C1E;
+}
+
+#message {
+    width: 100%;
+    margin-top: 10vh;
+}
+
+
+#messageText {
+    font-family: "Charter";
+    animation: 2s textFade;
+
+}
+
+#messageButton {
+    font-family: "Charter";
+    animation: buttonFade 3000ms ease 1 normal;
+    animation-fill-mode: both;
+}
+
+#project_card {
+    animation: projectsFade 1500ms ease 1 normal;
+}
+
+#testimonial-rdc {
+    opacity: 0;
+}
+
+#testimonial-rdc.active {
+    animation: testimonialFade 1500ms ease-in-out;
+    opacity: 1;
+}
+
+#service_cards {
+    opacity: 0;
+}
+
+#service_cards.active {
+    opacity: 1;
+    animation: projectsFade 1500ms ease-in;
+}
+
+#horizontal-line {
+    content: '';
+    position: relative;
+    background-color: white;
+    height: 3px;
+    width: 25%;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-item {
+    padding: 0;
+    font-family: 'Palatino'
+}
+
+.navbar-item::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.5s ease;
+}
+
+.navbar-item:hover {
+    background: none !important;
+
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+.navbar.active {
+    background-color: #BAA651;
+    transition: background-color 500ms ease-in-out;
+}
+
+
+
+#contact_me_button.active {
+    background-color: white;
+}
+
+#contact_us_text.active {
+    color: #BAA651;
+}
+
+#tabs {
+    position: relative;
+    gap: 10px;
+}
+
+
+.tab:hover {
+    opacity: 0.33;
+}
+
+
+#project:hover {
+    opacity: 0.75;
+}
+
+#blog-post:hover {
+    opacity: 0.75;
+}
+
+#tabs::after {
+    content: '';
+    position: absolute;
+    background-color: lightgray;
+    margin-top: 5px;
+    height: 2px;
+    width: 50%;
+    left: 25%;
+
+}
+
+li {
+    list-style-type: bullet;
+    color: white;
+    font-family: Charter;
+}
+
+p {
+    font-family: Charter;
+
+}
+
+h1 {
+    font-family: Charter;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .navbar-menu {
+    background-color: black;
+  }
+}
