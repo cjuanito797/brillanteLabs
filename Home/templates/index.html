@@ -88,18 +88,19 @@
                 <p class="text">FAQ</p>
             </a>
 
-            <!--
-            <a class="navbar-item has-text-white m-5 is-size-5"
-               href="{% url 'Home:our_services' %}">
-                <p class="text">Blog</p>
-            </a>
-            -->
+
 
             <a class="navbar-item has-text-white m-5 is-size-5 is-flex is-align-items-center"
                href="{% url 'blog:my_posts' %}">
-                <p class="text">Blog</p>
-                &nbsp;
+                <p class="text">Blog</p>&nbsp;
+            </a>
 
+            <a class="navbar-item has-text-white m-5 is-size-5"
+               href="{% url 'client:user_login' %}">
+                <div class="is-flex is-align-items-center">
+                    <p class="text">Login</p>
+                    <img src="{% static 'person.png' %}">
+                </div>
             </a>
 
             <!--
@@ -140,19 +141,6 @@
 
                 </div>
             </div>
-
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button m-5 is-size-5 p-5" style="background: linear-gradient(180deg, rgba(57,69,79,1) 0%, rgba(12,91,170,1) 7%, rgba(157,238,255,1) 77%);
- border: none;" href="{% url 'Home:translator_hype' %}">
-                        <p id="translator_hype_text" style="color: white; font-weight:
-                        bolder"><strong>My Translator</strong></p>
-                        <img src="{% static 'icons8-translator-50.png' %}" class="ml-2"
-                             alt="image of a translator icon.">
-                    </a>
-                </div>
-            </div>
-
 
         </div>
 
