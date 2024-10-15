@@ -47,6 +47,14 @@ def myAdmin(request):
         this_user = request.user
     return render(request, "myAdmin.html", {'this_user': this_user})
 
+@login_required(login_url='/client/login/')
+def create_gallery(request):
+
+    
+
+    return render(request, "create_gallery.html")
+
+
 def logout(request):
     if request.user.is_authenticated:
         request.session['is_signedIn'] = False

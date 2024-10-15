@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification"
           content="pKEmhkGIUvN9zvKPCbeiwEc9XsDbcOfJzEexyQMxhsc"/>
-    <title>Code By Juan </></title>
+    <title>KO'de by Juan </></title>
 
-    <link rel="icon" href="{% static 'icons8-idea-40.png' %}">
+    <link rel="icon" href="{% static 'boxing-glove.png' %}">
 
     <link fetchpriority="high" rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -35,9 +35,11 @@
            href=
                    "{% url 'Home:home' %}"
            style="font-family: hyperion; margin-left: 3vw;">
-            <p class="text"><strong>Code By Juan</strong></p>
-            <img src="{% static 'bulb.png' %}" width="50" height="50" alt="picture of a bulb">
+            <p class="text"><strong>KO'de by Juan</strong></p>
 
+            <img src="{% static 'icons8-boxing-glove-48.png' %}" width="48" height="48"
+                 class="m-1"
+                 alt="picture of a bulb">
 
         </a>
 
@@ -127,19 +129,6 @@
                 </div>
             </div>
 
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button m-5 is-size-5 p-5" style="background: linear-gradient(180deg, rgba(57,69,79,1) 0%, rgba(12,91,170,1) 7%, rgba(157,238,255,1) 77%);
- border: none;" href="{% url 'Home:translator_hype' %}">
-                        <p id="translator_hype_text" style="color: white; font-weight:
-                        bolder"><strong>My Translator</strong></p>
-                        <img src="{% static 'icons8-translator-50.png' %}" class="ml-2"
-                             alt="image of a translator icon.">
-                    </a>
-                </div>
-            </div>
-
-
         </div>
 
     </div>
@@ -159,7 +148,8 @@
                     provide you a digital tool for transforming the way you perform
                     translation by utilizing modern technologies. We can provide you with
                     fast, efficient and accurate translations for your digital documents,
-                    all while preserving format.</p>
+                    all while preserving your original format. Enter your email below to
+                    signup for our waitlist.</p>
 
                 <form method="post" class="pt-5 mt-5 has-text-centered">
                     <div class="field">
