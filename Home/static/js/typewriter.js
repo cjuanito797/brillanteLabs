@@ -2,7 +2,7 @@
         return new Promise((resolve) => setTimeout(resolve, ms));
       }
 
-      const phrases = ["Developer", "Designer", "Educator", "Lover <3"];
+      const phrases = ["Developer", "Designer", "Educator", "Enthusiast <3"];
       const el = document.getElementById("typewriter");
 
       let sleepTime = 100;

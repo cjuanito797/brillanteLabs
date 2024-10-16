@@ -5,7 +5,12 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth !important;
-    background: black;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 85%, rgba(67,70,70,1) 100%);
+
+
+
+
+
 
 }
 
@@ -14,7 +19,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     display: flex;
-    background-color: black;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 85%, rgba(67,70,70,1) 100%);
+
+
+
+
+
+
 }
 
 input, select, textarea{
@@ -55,7 +66,7 @@ footer {
 }
 
 #cursor {
-    color: #BAA651;
+    color: red;
     animation: blink 1s linear infinite;
 
   }
@@ -213,7 +224,7 @@ footer {
 }
 
 #custom_button {
-    background: linear-gradient(90deg, rgba(198,194,27,1) 0%, rgba(242,136,9,1) 100%);
+    background: linear-gradient(109.6deg, rgb(243, 67, 67) 11.2%, rgb(2, 38, 208) 100.2%);
     border: none;
     font-family: Charter;
     font-weight: bold;
@@ -221,14 +232,14 @@ footer {
 }
 
 #callToAction {
-    margin-top: 10%;
-    background-image: url("../Background/JPEG/AdobeStock_724882815.avif");
+    background-image: url("../Background/AdobeStock_75777773.avif");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-resize: cover;
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding-bottom: 5%;
 }
 
 #spacing {
@@ -242,7 +253,7 @@ footer {
 
 #message {
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 25vh;
 }
 
 
@@ -322,8 +333,8 @@ footer {
 }
 
 .navbar.active {
-    background-color: #BAA651;
-    transition: background-color 500ms ease-in-out;
+    background-color: #E32636;
+    transition: background-color 1000ms ease-in-out;
 }
 
 
