@@ -313,7 +313,7 @@ footer {
 
 #callToAction {
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),
-                  url('../Background/boxing_ring_background.avif') no-repeat center center;
+                  url('../Background/boxing_ring_background-min.jpeg') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 100vh;  /* or adjust based on your needs */
