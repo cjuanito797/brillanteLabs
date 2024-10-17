@@ -5,7 +5,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth !important;
-    background: rgba(185, 0, 0, 1);
+    background: rgba(0, 0, 0, 1)
 
 }
 
@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     display: flex;
-    background: rgba(185, 0, 0, 1);
+    background: rgba(0, 0, 0, 1)
 }
 
 input, select, textarea{
@@ -110,6 +110,97 @@ footer {
     }
 }
 
+@keyframes zoomInImage {
+    0% {
+        opacity: 0;
+        scale: 0%;
+        transform: translateX(50vw);
+    }
+
+    5%{
+        scale: 35%;
+    }
+
+    10%{
+        scale: 45%;
+
+    }
+
+    15% {
+        scale: 55%;
+    }
+
+    20% {
+        scale: 65%;
+    }
+
+    25% {
+        scale: 75%;
+    }
+
+    30% {
+        scale: 85%;
+    }
+
+    35% {
+        scale: 95%;
+    }
+
+    40% {
+        scale: 105%;
+    }
+
+    45% {
+        scale: 115%;
+    }
+
+    50% {
+        scale: 125%;
+    }
+
+    55% {
+        scale: 135%;
+
+    }
+
+    60% {
+        scale: 140%;
+    }
+
+    65% {
+        scale: 135%;
+    }
+
+    70%{
+        scale: 130%;
+    }
+
+    75% {
+        scale: 125%;
+    }
+
+    80% {
+        scale: 120%;
+    }
+
+    85% {
+        scale: 115%;
+    }
+
+    90% {
+        scale: 110%;
+    }
+
+    95% {
+        scale: 105%;
+    }
+
+
+    100% {
+        scale: 100%;
+    }
+}
+
 @keyframes rightContentFade {
     0% {
         transform: translateX(200%);
@@ -189,12 +280,12 @@ footer {
 
 }
 
-#about_me_summary {
+#about_me_stats {
     opacity: 0;
 }
 
-#about_me_summary.active {
-    animation: leftContentFade 1500ms ease-in-out;
+#about_me_stats.active {
+    animation: testimonialFade 1500ms ease-in-out;
     opacity: 1;
 }
 
@@ -203,7 +294,7 @@ footer {
 }
 
 #about_me_image.active {
-    animation: rightContentFade 1500ms ease-in-out;
+    animation: zoomInImage 2250ms linear;
     opacity: 1;
 }
 
@@ -221,7 +312,8 @@ footer {
 }
 
 #callToAction {
-    background: linear-gradient(rgba(165, 0, 0, 0), rgba(165, 0, 0, 0), rgba(165, 0, 0, 0), rgba(185, 0, 0, 1)), url('../Background/AdobeStock_983345475.avif');
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),
+                  url('../Background/boxing_ring_background.avif') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 100vh;  /* or adjust based on your needs */
@@ -242,7 +334,7 @@ footer {
 
 #message {
     width: 100%;
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 
 
@@ -267,6 +359,15 @@ footer {
 }
 
 #testimonial-rdc.active {
+    animation: testimonialFade 1500ms ease-in-out;
+    opacity: 1;
+}
+
+#quote {
+    opacity: 0;
+}
+
+#quote.active {
     animation: testimonialFade 1500ms ease-in-out;
     opacity: 1;
 }
@@ -322,7 +423,7 @@ footer {
 }
 
 .navbar.active {
-    background-color: rgba(185, 0, 0, 1);
+    background-color: black;
     transition: background-color 1000ms ease-in-out;
 }
 

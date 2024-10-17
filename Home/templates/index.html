@@ -20,7 +20,10 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <link rel="preload" fetchpriority="high" as="image"
-          href="{% static 'Background/AdobeStock_983345475.avif' %}"
+          href="{% static 'Background/boxing_ring_background.avif' %}"
+          type="image/avif">
+    <link rel="preload" fetchpriority="high" as="image"
+          href="{% static 'about_me.avif' %}"
           type="image/avif">
     <link fetchpriority="high" href="{% static 'css/main.css' %}" rel="stylesheet"
           type="text/css">
@@ -45,11 +48,11 @@
      aria-label="main navigation" id="navbar">
     <div class="navbar-brand">
 
-        <a class="navbar-item-brand is-size-2 is-size-2-mobile has-text-white is-flex is-align-items-center"
+        <a class="navbar-item-brand is-size-2 is-size-2-mobile  is-flex is-align-items-center"
            href=
                    "{% url 'Home:home' %}"
            style="font-family: hyperion; margin-left: 3vw;">
-            <p class="text"><strong>KO'de by Juan</strong></p>
+            <p class="text has-text-white"><strong>KO'de by Juan</strong></p>
             <img src="{% static 'icons8-boxing-glove-48.png' %}" width="48" height="48"
                  class="m-1"
                  alt="picture of a bulb">
@@ -73,47 +76,47 @@
         </div>
 
         <div class="navbar-end mr-5">
-            <a class="navbar-item has-text-white m-5 is-size-5"
+            <a class="navbar-item  m-5 is-size-5"
                href="{% url 'Home:about_me' %}">
-                <p class="text">About Me</p>
+                <p class="text has-text-white">About Me</p>
             </a>
 
 
-            <a class="navbar-item has-text-white m-5 is-size-5"
+            <a class="navbar-item  m-5 is-size-5"
                href="{% url 'Home:our_solutions' %}">
-                <p class="text">Project Showcase</p>
+                <p class="text has-text-white">Project Showcase</p>
             </a>
 
 
-            <a class="navbar-item has-text-white m-5 is-size-5 is-flex is-align-items-center"
+            <a class="navbar-item  m-5 is-size-5 is-flex is-align-items-center"
                href="{% url 'blog:my_posts' %}">
-                <p class="text">Blog</p>&nbsp;
+                <p class="text has-text-white">Blog</p>&nbsp;
             </a>
 
-            <a class="navbar-item has-text-white m-5 is-size-5"
+            <a class="navbar-item  m-5 is-size-5"
                href="{% url 'client:user_login' %}">
                 <div class="is-flex is-align-items-center">
-                    <p class="text">Login</p>
+                    <p class="text has-text-white">Login</p>
                     <img src="{% static 'person.png' %}">
                 </div>
             </a>
 
             <!--
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-white m-5 is-size-5">
+                <a class="navbar-link  m-5 is-size-5">
                     More
                 </a>
 
                 <div class="navbar-dropdown" style="background-color: black;">
-                    <a class="navbar-item has-text-white m-5 is-size-5">
+                    <a class="navbar-item  m-5 is-size-5">
                         Blog
                     </a>
-                    <a class="navbar-item has-text-white m-5 is-size-5">
+                    <a class="navbar-item  m-5 is-size-5">
                         Testimonials
                     </a>
 
                     <hr class="navbar-divider">
-                    <a class="navbar-item has-text-white m-5 is-size-5">
+                    <a class="navbar-item  m-5 is-size-5">
                         Report an issue
                     </a>
                 </div>
@@ -123,7 +126,7 @@
             <div class="navbar-item">
                 <div class="buttons">
 
-                    <a class="button has-text-white m-5 is-size-5 p-5
+                    <a class="button  m-5 is-size-5 p-5
                 has-text-weight-bold" id="contact_me_button"
                        href="{% url 'Home:contact_me' %}"
                        style="border: none; font-family: Charter;">
@@ -164,17 +167,17 @@
 
             <div id="message" class="has-text-left">
 
-                <p class="title is-size-1 has-text-white is-size-2-mobile"
+                <p class="title is-size-1  is-size-2-mobile has-text-white"
                    id="messageText" style="margin-left: 7%; margin-right: 5%;">
                     Hello! My Name Is <span>Juan
                     Lizarraga.</span> </br> Stepping into the ring as your
                     Website <span id="typewriter" style="
-                    background-color: white;
+                    background-color: red;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 "></span><span id="cursor">|</span></p>
 
-                <a class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+                <a class="button is-medium  is-size-5 has-text-left pl-5 pr-5 has-text-white"
                    id="messageButton"
                    href="#aboutUs"
                    style="background: linear-gradient(109.6deg, rgb(243, 67, 67) 11.2%, rgb(2, 38, 208) 100.2%);
@@ -183,7 +186,7 @@
 
 
  border: none; margin-left: 7%;
-                   margin-right: 5%;"><strong>Learn More</strong></a>
+                   margin-right: 5%;"><strong>Let's Talk!</strong></a>
 
             </div>
         </div>
@@ -195,54 +198,153 @@
     </section>
 
 
-    <section class="hero" id="aboutUs" style="background-color: rgba(185, 0, 0, 1)">
-        <div id="heading" class="p-5 m-2">
-            <p class="title has-text-white"
-               style="font-family: Charter;">Delivering Knockout Websites (est. 2023)
-            </p>
+    <section class="hero" id="aboutUs" style="background-color: rgba(0, 0, 0, 2);">
+
+        <div class="columns">
+            <div
+                    class="column is-one-quarter-fullhd is-one-third-widescreen is-two-fifths-desktop is-half-tablet is-three-quarters-mobile">
+                <div id="heading" class="p-5 m-2 is-half">
+                    <p class="title has-text-white"
+                       style="font-family: Charter;">Round 01 / About Me
+                    </p>
+
+                    <progress class="progress is-danger" value="25" max="100">
+                        90%
+                    </progress>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-flex-tablet is-align-items-center is-justify-content-center">
+            <div class="column is-half-fullhd is-full-mobile p-5 has-text-centered" id="about_me_image_column">
+                <img src="{% static 'about_me.avif' %}" id="about_me_image"
+                     style="border-radius: 1%;">
+            </div>
+
+            <div class="column p-5" id="about_me_stats">
+                <div class="columns is-flex is-justify-content-center is-align-items-center">
+                    <div
+                            class="column is-three-fifths-fullhd is-three-fifths-desktop is-four-fifths-tablet is-four-fifths-mobile p-5">
+                        <div class="box mt-5">
+                            <p class="title has-text-white has-text-centered">My Stats</p>
+
+                            <div class="is-flex is-align-items-center m-5">
+                                <p class="text has-text-white has-text-weight-bold">HTML </p>
+                                &nbsp;
+                                <progress class="progress is-success" value="90" max="100">
+                                    60%
+                                </progress>
+                            </div>
+
+
+                            <div class="is-flex is-align-items-center m-5">
+                                <p class="text has-text-white has-text-weight-bold">CSS </p>
+                                &nbsp;
+                                <progress class="progress is-success" value="80" max="100">
+                                    60%
+                                </progress>
+                            </div>
+
+                            <div class="is-flex is-align-items-center m-5">
+                                <p
+                                        class="text has-text-white has-text-weight-bold">
+                                    JavaScript
+                                </p>
+                                &nbsp;
+                                <progress class="progress is-success" value="85" max="100">
+                                    60%
+                                </progress>
+                            </div>
+
+                            <div class="is-flex is-align-items-center m-5">
+                                <p class="text has-text-white has-text-weight-bold">Python
+                                </p>
+                                &nbsp;
+                                <progress class="progress is-success" value="60" max="100">
+                                    60%
+                                </progress>
+                            </div>
+
+                            <div class="is-flex is-align-items-center m-5">
+                                <p class="text has-text-white has-text-weight-bold">Django
+                                </p>
+                                &nbsp;
+                                <progress class="progress is-success" value="80" max="100">
+                                    60%
+                                </progress>
+                            </div>
+
+                            <div class="is-flex is-align-items-center m-5">
+                                <p class="text has-text-white has-text-weight-bold">AdobeXD</p>
+                                &nbsp;
+                                <progress class="progress is-success" value="85" max="100">
+                                    60%
+                                </progress>
+                            </div>
+
+                            <div class="container is-flex is-justify-content-center p-2"
+                                 style="">
+
+                                <div
+                                        class="has-text-centered is-flex is-align-items-center is-justify-content-center p-3"
+                                        style="background-color:
+                        #43B133; width: 50px; height: 50px; border-radius: 10%;">
+                                    <p
+                                            class="text has-text-white has-text-weight-bold is-size-3"
+                                            style=" font-weight: bolder;">
+                                        4</p>
+                                </div>
+
+                                <div
+                                        class="has-text-centered is-flex is-align-items-center is-justify-content-center p-3"
+                                        style="background-color:
+                        #DE2525; width: 50px; height: 50px; border-radius: 10%;">
+                                    <p
+                                            class="text has-text-white has-text-weight-bold is-size-3"
+                                            style=" font-weight: bolder;">
+                                        0</p>
+                                </div>
+
+                                <div
+                                        class="has-text-centered is-flex is-align-items-center is-justify-content-center p-3"
+                                        style="background-color:
+                        #48A3D3; width: 50px; height: 50px; border-radius: 10%;">
+                                    <p
+                                            class="text has-text-white has-text-weight-bold is-size-3"
+                                            style=" font-weight: bolder;">
+                                        0</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
-        <div class="columns is-centered is-mobile p-5 m-2">
-
+        <div id="quote" style="padding-top: 5%;"
+             class="columns is-centered is-mobile">
             <div
-                    class="column is-four-fifths-fullhd is-full-tablet is-full-mobile is-align-items-center">
+                    class="column is-one-third-fullhd is-two-thirds-tablet is-four-fifths-mobile has-text-centered">
 
+                <p
+                        class="text has-text-weight-bold has-text-white is-size-4">
+                    "The pursuit of mastery is the pursuit
+                    of limitless improvement. It is about
+                    making the seemingly impossible, possible."
+                </p>
 
-                <div class="columns is-flex-tablet is-align-items-center">
-                    <div class="column is-half-desktop" id="about_me_summary">
+                <p class="text has-text-weight-bold has-text-white is-size-5 mt-4">
+                    - Daniel Pink
+                </p>
 
-                        <p class="text has-text-white has-text-weight-bold is-size-6"> Hello
-                            there, my name is Juan Lizarraga-Cortez, and I
-                            am a
-                            freelance web developer based out of the midwest. I established
-                            Code By Juan (formerly known as Prairie Code) in 2023. I
-                            discovered my passion for web development and programming during
-                            my undergraduate tenure at the University of Nebraska Omaha. I
-                            found myself being very entrepreneurial with the projects we
-                            were assigned, from launching a restaurant ordering business, to
-                            creating a social media site for local book users to creating a
-                            scheduling application for a local nail salon company. You can
-                            read more about me and my experience, at my "About Me" page
-                            below.</p>
-
-                        <div id="button-container-about-me" class="has-text-centered mt-5">
-                            <a class="button is-medium has-text-white is-size-5"
-                               id="custom_button" href="{% url 'Home:about_me' %}">
-                                <strong>About Me</strong></a>
-                        </div>
-                    </div>
-
-                    <div class="column is-half-desktop has-text-centered" id="about_me_image">
-
-                        <img loading="lazy" src="{% static 'me_cartoon.avif' %}" width="450"
-                             height="450"
-                             style="position: relative;">
-
-                    </div>
-                </div>
-
-
+                <div class="hr mt-4" style="width: 75%; margin-left: 12%; border: 1px
+                        solid
+                                #DE2525; opacity: 1;"></div>
             </div>
 
         </div>
@@ -362,7 +464,7 @@
 
                         <div class="hr mt-4" style="width: 75%; margin-left: 12%; border: 1px
                         solid
-                                #9F8B3B; opacity: 1;"></div>
+                                #DE2525; opacity: 1;"></div>
                     </div>
 
                 </div>
@@ -487,7 +589,7 @@
                         <!--
                         <div id="button-container-contact-us"
                              class="has-text-centered mt-5 pb-5">
-                            <a class="button is-medium has-text-white is-size-5"
+                            <a class="button is-medium  is-size-5"
                                id="custom_button"
                                href="{% url 'Home:our_services' %}"
                                style="background-color:

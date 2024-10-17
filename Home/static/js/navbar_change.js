@@ -10,7 +10,7 @@ function navCallBack(entries) {
 }
 
 const navOptions = {
-    threshold: .95,
+    threshold: .75,
 }
 
 const navObs = new IntersectionObserver(navCallBack, navOptions)

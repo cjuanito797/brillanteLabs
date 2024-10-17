@@ -1,6 +1,7 @@
 const testimonial = document.querySelector("#testimonial-rdc");
-const about_me_summary = document.querySelector("#about_me_summary");
-const aboue_me_image = document.querySelector("#about_me_image");
+const quote = document.querySelector("#quote");
+const about_me_stats = document.querySelector("#about_me_stats");
+const about_me_image = document.querySelector("#about_me_image");
 //const service_cards = document.querySelector("#service_cards");
 
 // Intersection observer for the about me summary.
@@ -9,17 +10,40 @@ function about_me_func(entries) {
     if (!entries[0].isIntersecting) {
         return;
     } else {
-        about_me_summary.classList.add('active')
         about_me_image.classList.add('active');
+        setTimeout(() => {
+            about_me_stats.classList.add('active');
+        }, 2500);
+
+        setTimeout(() => {
+            quote_obs.observe(quote);
+        }, 4000);
     }
 }
 
-const aboue_me_options = {
+const about_me_options = {
     threshold: 0.75,
 }
 
-const about_me_obs = new IntersectionObserver(about_me_func, aboue_me_options);
-about_me_obs.observe(about_me_summary);
+const about_me_obs = new IntersectionObserver(about_me_func, about_me_options);
+about_me_obs.observe(about_me_image);
+
+// Intersection observer for the quote.
+function quote_func(entries) {
+    if (!entries[0].isIntersecting) {
+        console.log("Object is not intersecting!");
+        return;
+    } else {
+        console.log("Object is intersecting");
+        quote.classList.add('active');
+    }
+}
+
+const quote_options = {
+    threshold: 0.85,
+}
+
+const quote_obs = new IntersectionObserver(quote_func, quote_options);
 
 
 // Intersection observer for the testimonial section.
