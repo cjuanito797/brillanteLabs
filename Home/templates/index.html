@@ -52,7 +52,9 @@
            href=
                    "{% url 'Home:home' %}"
            style="font-family: hyperion; margin-left: 3vw;">
-            <p class="text has-text-white"><strong>KO'de by Juan</strong></p>
+            <p class="text has-text-white is-size-1" style="font-family: 'Brush Script MT'">
+                <strong>KO'de by
+                    Juan</strong></p>
             <img src="{% static 'icons8-boxing-glove-48.png' %}" width="48" height="48"
                  class="m-1"
                  alt="picture of a bulb">
@@ -179,7 +181,7 @@
 
                 <a class="button is-medium  is-size-5 has-text-left pl-5 pr-5 has-text-white"
                    id="messageButton"
-                   href="#aboutUs"
+                   href="{% url 'Home:contact_me' %}"
                    style="background: linear-gradient(109.6deg, rgb(243, 67, 67) 11.2%, rgb(2, 38, 208) 100.2%);
 
 
@@ -204,27 +206,19 @@
             <div
                     class="column">
                 <div id="heading" class="is-half">
-                    <p class="title has-text-white"
-                       style="font-family: Charter;">Round 01 / About Me
+                    <p class="title has-text-white is-size-1"
+                       style="font-family: 'Brush Script MT';">Round 01 / About Me
                     </p>
-                    </div>
-                </div>
-
-            <div
-                    class="column is-one-quarter-fullhd is-one-third-widescreen is-two-fifths-desktop is-half-tablet is-two-thirds-mobile">
-                    <progress class="progress is-danger" value="25" max="100">
-                        90%
-                    </progress>
-
-
                 </div>
             </div>
+
+        </div>
         </div>
 
 
-
         <div class="columns is-flex-tablet is-align-items-center is-justify-content-center">
-            <div class="column is-half-fullhd is-full-mobile p-5 has-text-centered" id="about_me_image_column">
+            <div class="column is-half-fullhd is-full-mobile p-5 has-text-centered"
+                 id="about_me_image_column">
                 <img src="{% static 'about_me.avif' %}" id="about_me_image"
                      style="border-radius: 1%;">
             </div>
