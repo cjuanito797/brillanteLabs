@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'BoxingFont';
+    src: url("../fonts/HeavyBoxing-Regular.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*removes default margin & padding*/
 html, body {
     padding: 0px !important;
