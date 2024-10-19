@@ -15,7 +15,57 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+    </style>
 
+    <style>
+        /* Set black background for the body */
+
+
+        /* Container for the progress circles */
+        .progress-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+        }
+
+        /* Background circle */
+        .bg {
+            fill: none;
+            stroke: #2a2a2a; /* Darker gray for background circle */
+            stroke-width: 30; /* Thicker background stroke */
+        }
+
+        /* Circular progress path with vibrant gradient */
+        .circular-progress {
+            fill: none;
+            stroke: url(#gradient); /* Use gradient for the stroke */
+            stroke-width: 30; /* Thicker progress stroke */
+            stroke-linecap: round;
+            stroke-dasharray: 628; /* Circumference of the circle (2 * Math.PI * r) */
+            stroke-dashoffset: 628;
+            filter: url(#strongGlow); /* Apply stronger glow effect */
+            transform: rotate(-90deg);
+            transform-origin: 150px 150px; /* Adjust origin based on new size */
+        }
+
+        /* End indicator circle */
+        .end-indicator {
+            fill: #00f; /* Blue for the end indicator */
+            filter: url(#strongGlow); /* Apply stronger glow effect */
+        }
+
+        /* Progress text in the center */
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px; /* Larger font size */
+            font-weight: bold;
+            color: white; /* White text for visibility */
+            font-family: Charter;
+        }
 
     </style>
 
@@ -215,20 +265,13 @@
     <section class="hero" id="aboutUs" style="background-color: rgba(0, 0, 0, 2);">
 
         <div class="columns ml-2 p-0" style="flex-direction: column;">
-            <div
-                    class="column">
+            <div class="column">
                 <div id="heading" class="is-half">
-                    <p class="title has-text-white is-size-2"
-                       style="font-family: 'Mr Dafoe', cursive;
-  font-weight: 700;
-  font-style: normal">Round
-                        01 /
-                        About Me
+                    <p class="title has-text-white is-size-2" id="cursive-heading">
+                        Round 1 / About Me
                     </p>
                 </div>
             </div>
-
-        </div>
         </div>
 
 
@@ -341,6 +384,73 @@
             </div>
         </div>
 
+        <div class="" style="width: 100%; padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto; padding-top: 5vh;">
+            <div class="columns is-centered is-four-fifths m-5">
+                <!-- First Column -->
+                <div class="column is-3 m-5 p-5" style="background-color: #1B1C1E;
+                border-radius:
+                 2%; flex-grow: 1;">
+                    <div class="has-text-centered">
+                        <h2 class="title has-text-centered has-text-white is-size-2"
+                            id="cursive-heading">KO
+                            Experience</h2>
+                    </div>
+                    <div
+                            class="p-5 mt-5 is-flex is-align-items-center is-justify-content-center">
+                        <img src="{% static 'uno_alum.png' %}" height="150" width="150">
+                    </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="column is-3 m-5 p-5" style="background-color:
+                #1B1C1E; border-radius: 2%; flex-grow: 1;">
+                    <div class="has-text-centered">
+                        <h2 class="title has-text-centered has-text-white is-size-2"
+                            id="cursive-heading">Beyond The Ring</h2>
+                    </div>
+                    <div class="p-5 has-text-centered">
+                        <img src="{% static 'Nike-trail-logo.png' %}" height="250"
+                             width="250">
+
+                    </div>
+                </div>
+
+                <!-- Third Column -->
+                <div class="column is-3 m-5 p-5" style="background-color: #1B1C1E;
+                border-radius: 2%; flex-grow: 1;">
+                    <div class="has-text-centered">
+                        <h2 class="title has-text-centered has-text-white is-size-2"
+                            id="cursive-heading">Undisputed Values</h2>
+                    </div>
+                    <div class="p-5 has-text-centered">
+
+                        <div
+                                class="text is-flex is-align-items-center is-justify-content-center p-1">
+                            <img src="{% static 'glove-left.png' %}" class="m-1">
+
+                            <p
+                                    class="text has-text-white is-size-5 has-text-weight-bold">
+                                Knockout Integrity</p>
+                            <img src="{% static 'glove-right.png' %}" class="m-1">
+
+                        </div>
+
+                        <div
+                                class="text is-flex is-align-items-center is-justify-content-center p-1">
+                            <img src="{% static 'glove-left.png' %}" class="m-1">
+
+                            <p
+                                    class="text has-text-white is-size-5 has-text-weight-bold">
+                                Relentless Dedication</p>
+                            <img src="{% static 'glove-right.png' %}" class="m-1">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div id="quote" style="padding-top: 5%;"
              class="columns is-centered is-mobile">
@@ -371,10 +481,14 @@
 
         <div id="featured_projects">
 
-            <div id="heading" class="p-5 m-2">
-                <p class="title has-text-white"
-                   style="font-family: Charter;">See My Most Recent Victories.
-                </p>
+            <div class="columns ml-2 p-0" style="flex-direction: column;">
+                <div class="column">
+                    <div id="heading" class="is-half">
+                        <p class="title has-text-white is-size-2" id="cursive-heading">
+                            Round 2 / My Victories
+                        </p>
+                    </div>
+                </div>
             </div>
 
 
@@ -587,15 +701,19 @@
                 <div class="column p-3">
 
 
-                    <div id="heading">
-                        <p class="title has-text-white mb-2" style="font-family: Charter;">
-                            <strong>What I Can Provide.</strong></p>
-
+                    <div class="columns ml-2 p-0" style="flex-direction: column;">
+                        <div class="column">
+                            <div id="heading" class="is-half">
+                                <p class="title has-text-white is-size-2" id="cursive-heading">
+                                    Round 3 / My Services
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
 
                     <div class="column is-four-fifths-fullhd p-0 mt-5">
-                        <p class="text pt-1 has-text-white has-text-weight-semibold"
+                        <p class="ml-4 text pt-1 has-text-white has-text-weight-semibold"
                            style="font-family:
                         Charter;">I provide a plenitude of services, in order to create
                             full stack web applications. I am versed in many different
@@ -743,8 +861,6 @@
         </div>
 
 
-        </div>
-
     </section>
 
     <section class="hero" style=" margin-top: 5%; margin-bottom: 5%;"
@@ -753,13 +869,19 @@
             <div class="column is-one-third-fullhd p-5 m-2">
                 <div class="column p-3">
 
-                    <div id="heading">
-                        <p class="title has-text-white mb-2" style="font-family: Charter;
-                    ">Powered By.</p>
+
+                    <div class="columns ml-2 p-0" style="flex-direction: column;">
+                        <div class="column">
+                            <div id="heading" class="is-half">
+                                <p class="title has-text-white is-size-2" id="cursive-heading">
+                                    Round 4 / Fueled By
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="column is-full p-0 mt-5">
-                        <p class="text pt-1 has-text-white has-text-weight-semibold"
+                        <p class="text ml-5 pt-1 has-text-white has-text-weight-semibold"
                            style="font-family: Charter;">Leveraging the power of modern
                             technologies to bring your ideas to life.</p>
                     </div>
@@ -795,19 +917,65 @@
 
     <div class="columns pt-5 mt-5 pb-5 mb-5">
         <div class="column is-one-third has-text-centered mt-5">
-            <p class="title has-text-white">3+</p>
-            <p class="title has-text-white">Satisfied Clients</p>
+            <!-- Container for the circular progress bar -->
+            <div class="progress-container" id="progress-bar-1" style="margin: 0 auto;">
+                <svg class="progress-circle" width="300" height="300" viewBox="0 0 300 300">
+                    <circle class="bg" cx="150" cy="150" r="100"></circle>
+                    <circle class="circular-progress" cx="150" cy="150" r="100"></circle>
+                    <circle class="end-indicator" cx="150" cy="50" r="12"></circle>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1"/>
+                            <stop offset="100%" style="stop-color:#0000ff;stop-opacity:1"/>
+                        </linearGradient>
+                        <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="12"
+                                            result="coloredBlur"></feGaussianBlur>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+                <div class="progress-text" id="progress-percentage-1">0%</div>
+            </div>
+            <div class="has-text-centered">
+                <p class="text has-text-white has-text-weight-bold is-size-3">Code Accuracy</p>
+            </div>
+        </div>
+
+
+        <div class="column is-one-third has-text-centered mt-5 ">
+            <div class="progress-container" id="progress-bar-2" style="margin: 0 auto;">
+                <svg class="progress-circle" width="300" height="300" viewBox="0 0 300 300">
+                    <circle class="bg" cx="150" cy="150" r="100"></circle>
+                    <circle class="circular-progress" cx="150" cy="150" r="100"></circle>
+                    <circle class="end-indicator" cx="150" cy="50" r="12"></circle>
+                </svg>
+                <div class="progress-text" id="progress-percentage-2">0%</div>
+            </div>
+            <div class="has-text-centered">
+                <p class="text has-text-white has-text-weight-bold is-size-3">Website
+                    Uptime</p>
+            </div>
         </div>
 
         <div class="column is-one-third has-text-centered mt-5">
-            <p class="title has-text-white">100%</p>
-            <p class="title has-text-white">Website Uptime</p>
+            <div class="progress-container" id="progress-bar-3" style="margin: 0 auto;">
+                <svg class="progress-circle" width="300" height="300" viewBox="0 0 300 300">
+                    <circle class="bg" cx="150" cy="150" r="100"></circle>
+                    <circle class="circular-progress" cx="150" cy="150" r="100"></circle>
+                    <circle class="end-indicator" cx="150" cy="50" r="12"></circle>
+                </svg>
+                <div class="progress-text" id="progress-percentage-3">0%</div>
+            </div>
+            <div class="has-text-centered">
+                <p class="text has-text-white has-text-weight-bold is-size-3">Customer
+                    Satisfaction</p>
+            </div>
         </div>
 
-        <div class="column is-one-third has-text-centered mt-5">
-            <p class="title has-text-white">3+</p>
-            <p class="title has-text-white">Years Of Experience</p>
-        </div>
     </div>
 
 </main>
@@ -878,5 +1046,61 @@
     });
 
 </script>
+
+<script>
+    function animateProgressBar(id, percentageId, duration) {
+      let progress = 0;
+      const totalLength = 628;
+      const circularProgress = document.querySelector(`#${id} .circular-progress`);
+      const endIndicator = document.querySelector(`#${id} .end-indicator`);
+      const percentageText = document.getElementById(percentageId);
+
+      let interval = setInterval(() => {
+        progress += 1;
+        if (progress > 100) {
+          clearInterval(interval);
+        } else {
+          // Update percentage text
+          percentageText.innerText = progress + '%';
+
+          // Calculate progress for circular stroke
+          const offset = totalLength - (progress / 100) * totalLength;
+          circularProgress.style.strokeDashoffset = offset;
+
+          // Move the end indicator smoothly along the circle
+          const angle = (progress / 100) * 360 - 90;
+          const radians = (angle * Math.PI) / 180;
+          const x = 150 + 100 * Math.cos(radians);
+          const y = 150 + 100 * Math.sin(radians);
+          endIndicator.setAttribute('cx', x);
+          endIndicator.setAttribute('cy', y);
+        }
+      }, duration);
+    }
+
+    // Intersection Observer callback
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          const percentageId = id.replace('progress-bar', 'progress-percentage');
+          animateProgressBar(id, percentageId, 30); // Adjust the animation speed if necessary
+          observer.unobserve(entry.target); // Unobserve once the animation starts
+        }
+      });
+    }
+
+    // Create Intersection Observer
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 1.0 // Only start when 100% of the progress bar is in view
+    });
+
+    // Observe each progress bar
+    document.querySelectorAll('.progress-container').forEach(container => {
+      observer.observe(container);
+    });
+  </script>
+
+
 </body>
 </html>
