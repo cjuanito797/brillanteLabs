@@ -282,106 +282,7 @@
                      style="border-radius: 1%;">
             </div>
 
-            <div class="column p-5" id="about_me_stats">
-                <div class="columns is-flex is-justify-content-center is-align-items-center">
-                    <div
-                            class="column is-three-fifths-fullhd is-three-fifths-desktop is-four-fifths-tablet is-four-fifths-mobile p-5">
-                        <div class="box mt-5">
-                            <p class="title has-text-white has-text-centered">My Stats</p>
 
-                            <div class="is-flex is-align-items-center m-5">
-                                <p class="text has-text-white has-text-weight-bold">HTML </p>
-                                &nbsp;
-                                <progress class="progress is-success" value="90" max="100">
-                                    60%
-                                </progress>
-                            </div>
-
-
-                            <div class="is-flex is-align-items-center m-5">
-                                <p class="text has-text-white has-text-weight-bold">CSS </p>
-                                &nbsp;
-                                <progress class="progress is-success" value="80" max="100">
-                                    60%
-                                </progress>
-                            </div>
-
-                            <div class="is-flex is-align-items-center m-5">
-                                <p
-                                        class="text has-text-white has-text-weight-bold">
-                                    JavaScript
-                                </p>
-                                &nbsp;
-                                <progress class="progress is-success" value="85" max="100">
-                                    60%
-                                </progress>
-                            </div>
-
-                            <div class="is-flex is-align-items-center m-5">
-                                <p class="text has-text-white has-text-weight-bold">Python
-                                </p>
-                                &nbsp;
-                                <progress class="progress is-success" value="60" max="100">
-                                    60%
-                                </progress>
-                            </div>
-
-                            <div class="is-flex is-align-items-center m-5">
-                                <p class="text has-text-white has-text-weight-bold">Django
-                                </p>
-                                &nbsp;
-                                <progress class="progress is-success" value="80" max="100">
-                                    60%
-                                </progress>
-                            </div>
-
-                            <div class="is-flex is-align-items-center m-5">
-                                <p class="text has-text-white has-text-weight-bold">AdobeXD</p>
-                                &nbsp;
-                                <progress class="progress is-success" value="85" max="100">
-                                    60%
-                                </progress>
-                            </div>
-
-                            <div class="container is-flex is-justify-content-center p-2"
-                                 style="">
-
-                                <div
-                                        class="has-text-centered is-flex is-align-items-center is-justify-content-center p-3"
-                                        style="background-color:
-                        #43B133; width: 50px; height: 50px; border-radius: 10%;">
-                                    <p
-                                            class="text has-text-white has-text-weight-bold is-size-3"
-                                            style=" font-weight: bolder;">
-                                        4</p>
-                                </div>
-
-                                <div
-                                        class="has-text-centered is-flex is-align-items-center is-justify-content-center p-3"
-                                        style="background-color:
-                        #DE2525; width: 50px; height: 50px; border-radius: 10%;">
-                                    <p
-                                            class="text has-text-white has-text-weight-bold is-size-3"
-                                            style=" font-weight: bolder;">
-                                        0</p>
-                                </div>
-
-                                <div
-                                        class="has-text-centered is-flex is-align-items-center is-justify-content-center p-3"
-                                        style="background-color:
-                        #48A3D3; width: 50px; height: 50px; border-radius: 10%;">
-                                    <p
-                                            class="text has-text-white has-text-weight-bold is-size-3"
-                                            style=" font-weight: bolder;">
-                                        0</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="" style="width: 100%; padding-left: 0;
@@ -473,6 +374,14 @@
                                 #DE2525; opacity: 1;"></div>
             </div>
 
+        </div>
+
+        <div class="column has-text-centered">
+            <a href="{% url 'Home:our_solutions' %}"
+               class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+               style="font-family: Charter;" id="custom_button">
+                See Profile
+            </a>
         </div>
 
     </section>
@@ -888,26 +797,41 @@
                 </div>
             </div>
 
-            <div class="column is-two-thirds-fullhd">
+            <div class="column is-two-thirds-fullhd has-text-centered p-5">
 
-                <div class="columns is-vertical">
-
-                    <div
-                            class="column is-flex-wrap-wrap is-justify-content-center is-align-items-center	has-text-centered p-5">
-                        <div id="image_container">
-                            <img loading="lazy" src="{% static 'mysql.png' %}"
-                                 class="ml-2 mr-2">
-                            <img loading="lazy" src="{% static 'html5.png' %}"
-                                 class="ml-2 mr-2">
-                            <img loading="lazy" src="{% static 'python.png' %}" class="ml-2
-                            mr-2">
-                            <img loading="lazy" src="{% static 'aws.png' %}" class="ml-2 mr-2">
-
-
-                        </div>
+                <div class="icon-container has-text-centered p-5" id="icon-container">
+                    <div class="icon" id="icon1">
+                        <img src="{% static 'icons-animation/icons8-aws-128.png' %}">
                     </div>
+                    <div class="icon" id="icon2">
+                        <img src="{% static 'icons-animation/bulma.png' %}">
+                    </div>
+                    <div class="icon" id="icon3">
+                        <img src="{% static 'icons-animation/vue.png' %}">
+                    </div>
+                    <div class="icon" id="icon4">
+                        <img src="{% static 'icons-animation/chat.png' %}">
+                    </div>
+                    <div class="icon" id="icon5">
+                        <img src="{% static 'icons-animation/django.png' %}">
 
+                    </div>
+                    <div class="icon" id="icon6">
+                        <img src="{% static 'icons-animation/html5.png' %}">
+                    </div>
+                    <div class="icon" id="icon7">
+                        <img src="{% static 'icons-animation/icons8-css3-128.png' %}">
+                    </div>
+                    <div class="icon" id="icon8">
+                        <img src="{% static 'icons-animation/js.png' %}">
 
+                    </div>
+                    <div class="icon" id="icon9">
+                        <img src="{% static 'icons-animation/python.png' %}">
+                    </div>
+                    <div class="icon" id="icon10">
+                        <img src="{% static 'icons-animation/sql.png' %}">
+                    </div>
                 </div>
 
             </div>
@@ -915,8 +839,8 @@
     </section>
 
 
-    <div class="columns pt-5 mt-5 pb-5 mb-5">
-        <div class="column is-one-third has-text-centered mt-5">
+    <div class="columns pt-5 mt-5 pb-5 mb-5 pr-5">
+        <div class="column is-one-third has-text-centered mt-5 pr-5 has-text-centered">
             <!-- Container for the circular progress bar -->
             <div class="progress-container" id="progress-bar-1" style="margin: 0 auto;">
                 <svg class="progress-circle" width="300" height="300" viewBox="0 0 300 300">
@@ -1049,58 +973,90 @@
 
 <script>
     function animateProgressBar(id, percentageId, duration) {
-      let progress = 0;
-      const totalLength = 628;
-      const circularProgress = document.querySelector(`#${id} .circular-progress`);
-      const endIndicator = document.querySelector(`#${id} .end-indicator`);
-      const percentageText = document.getElementById(percentageId);
+        let progress = 0;
+        const totalLength = 628;
+        const circularProgress = document.querySelector(`#${id} .circular-progress`);
+        const endIndicator = document.querySelector(`#${id} .end-indicator`);
+        const percentageText = document.getElementById(percentageId);
 
-      let interval = setInterval(() => {
-        progress += 1;
-        if (progress > 100) {
-          clearInterval(interval);
-        } else {
-          // Update percentage text
-          percentageText.innerText = progress + '%';
+        let interval = setInterval(() => {
+            progress += 1;
+            if (progress > 100) {
+                clearInterval(interval);
+            } else {
+                // Update percentage text
+                percentageText.innerText = progress + '%';
 
-          // Calculate progress for circular stroke
-          const offset = totalLength - (progress / 100) * totalLength;
-          circularProgress.style.strokeDashoffset = offset;
+                // Calculate progress for circular stroke
+                const offset = totalLength - (progress / 100) * totalLength;
+                circularProgress.style.strokeDashoffset = offset;
 
-          // Move the end indicator smoothly along the circle
-          const angle = (progress / 100) * 360 - 90;
-          const radians = (angle * Math.PI) / 180;
-          const x = 150 + 100 * Math.cos(radians);
-          const y = 150 + 100 * Math.sin(radians);
-          endIndicator.setAttribute('cx', x);
-          endIndicator.setAttribute('cy', y);
-        }
-      }, duration);
+                // Move the end indicator smoothly along the circle
+                const angle = (progress / 100) * 360 - 90;
+                const radians = (angle * Math.PI) / 180;
+                const x = 150 + 100 * Math.cos(radians);
+                const y = 150 + 100 * Math.sin(radians);
+                endIndicator.setAttribute('cx', x);
+                endIndicator.setAttribute('cy', y);
+            }
+        }, duration);
     }
 
     // Intersection Observer callback
     function handleIntersection(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          const percentageId = id.replace('progress-bar', 'progress-percentage');
-          animateProgressBar(id, percentageId, 30); // Adjust the animation speed if necessary
-          observer.unobserve(entry.target); // Unobserve once the animation starts
-        }
-      });
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                const percentageId = id.replace('progress-bar', 'progress-percentage');
+                animateProgressBar(id, percentageId, 20); // Adjust the animation speed if necessary
+                observer.unobserve(entry.target); // Unobserve once the animation starts
+            }
+        });
     }
 
     // Create Intersection Observer
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 1.0 // Only start when 100% of the progress bar is in view
+        threshold: 0.85 // Only start when 100% of the progress bar is in view
     });
 
     // Observe each progress bar
     document.querySelectorAll('.progress-container').forEach(container => {
-      observer.observe(container);
+        observer.observe(container);
     });
-  </script>
+</script>
 
+  <script>
+    const container = document.getElementById('icon-container');
+    const icons = document.querySelectorAll('.icon');
+
+    function getRandomTransform() {
+      const randomX = Math.floor(Math.random() * 400) - 200; // Random value between -200 and 200
+      const randomY = Math.floor(Math.random() * 400) - 200;
+      const randomZ = Math.floor(Math.random() * 300) - 150;
+      return `translate3d(${randomX}px, ${randomY}px, ${randomZ}px)`; // Return the random transform value
+    }
+
+    // Set random transform on each icon before observing
+    icons.forEach(icon => {
+      icon.style.transform = getRandomTransform(); // Assign random starting position
+    });
+
+    // Create observer for the entire container and log when triggered
+    const icon_observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log("Container is in view"); // Log when observer triggers
+          container.classList.add('visible'); // Make the icons visible and move to position
+          icons.forEach(icon => {
+            icon.style.transform = "translate3d(0, 0, 0)"; // Move icons back to original position
+          });
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger observer when 50% of the container is visible
+
+    icon_observer.observe(container); // Apply observer to the container
+
+  </script>
 
 </body>
 </html>

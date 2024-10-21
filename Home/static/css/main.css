@@ -502,3 +502,22 @@ h1 {
     }
 }
 
+    .icon-container {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .icon {
+      width: 150px;
+      height: 150px;
+      opacity: 0; /* Initially hidden */
+      transform: translate3d(-200px, 0, 0); /* Start out of view */
+      transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Smooth transition */
+    }
+
+    .visible .icon {
+      opacity: 1;
+      transform: translate3d(0, 0, 0); /* Move icons into view */
+    }
