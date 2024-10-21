@@ -1016,7 +1016,7 @@
 
     // Create Intersection Observer
     const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.85 // Only start when 100% of the progress bar is in view
+        threshold: 0.75 // Only start when 100% of the progress bar is in view
     });
 
     // Observe each progress bar
@@ -1052,7 +1052,7 @@
           });
         }
       });
-    }, { threshold: 0.5 }); // Trigger observer when 50% of the container is visible
+    }, { threshold: 0.65 }); // Trigger observer when 50% of the container is visible
 
     icon_observer.observe(container); // Apply observer to the container
 
