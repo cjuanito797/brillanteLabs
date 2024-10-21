@@ -17,57 +17,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
     </style>
 
-    <style>
-        /* Set black background for the body */
-
-
-        /* Container for the progress circles */
-        .progress-container {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 20px;
-        }
-
-        /* Background circle */
-        .bg {
-            fill: none;
-            stroke: #2a2a2a; /* Darker gray for background circle */
-            stroke-width: 30; /* Thicker background stroke */
-        }
-
-        /* Circular progress path with vibrant gradient */
-        .circular-progress {
-            fill: none;
-            stroke: url(#gradient); /* Use gradient for the stroke */
-            stroke-width: 30; /* Thicker progress stroke */
-            stroke-linecap: round;
-            stroke-dasharray: 628; /* Circumference of the circle (2 * Math.PI * r) */
-            stroke-dashoffset: 628;
-            filter: url(#strongGlow); /* Apply stronger glow effect */
-            transform: rotate(-90deg);
-            transform-origin: 150px 150px; /* Adjust origin based on new size */
-        }
-
-        /* End indicator circle */
-        .end-indicator {
-            fill: #00f; /* Blue for the end indicator */
-            filter: url(#strongGlow); /* Apply stronger glow effect */
-        }
-
-        /* Progress text in the center */
-        .progress-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px; /* Larger font size */
-            font-weight: bold;
-            color: white; /* White text for visibility */
-            font-family: Charter;
-        }
-
-    </style>
 
     <link rel="icon" href="{% static 'boxing-glove.png' %}">
 
@@ -82,7 +31,7 @@
     <link rel="preload" fetchpriority="high" as="image"
           href="{% static 'about_me.avif' %}"
           type="image/avif">
-    <link fetchpriority="high" href="{% static 'css/main.css' %}?v=1.1" rel="stylesheet"
+    <link fetchpriority="high" href="{% static 'css/main.css' %}?v=1.3" rel="stylesheet"
           type="text/css">
     <link fetchpriority="low" href="{% static 'css/lightbox.css' %}" rel="stylesheet"
           type="text/css">
@@ -353,6 +302,14 @@
             </div>
         </div>
 
+        <div class="column has-text-centered">
+            <a href="{% url 'Home:about_me' %}"
+               class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
+               style="font-family: Charter;" id="custom_button">
+                See Profile
+            </a>
+        </div>
+
         <div id="quote" style="padding-top: 5%;"
              class="columns is-centered is-mobile">
             <div
@@ -376,13 +333,6 @@
 
         </div>
 
-        <div class="column has-text-centered">
-            <a href="{% url 'Home:our_solutions' %}"
-               class="button is-medium has-text-white is-size-5 has-text-left pl-5 pr-5"
-               style="font-family: Charter;" id="custom_button">
-                See Profile
-            </a>
-        </div>
 
     </section>
 
@@ -776,7 +726,7 @@
              id="poweredBy">
         <div class="columns mb-5">
             <div class="column is-one-third-fullhd p-5 m-2">
-                <div class="column p-3">
+                <div class="column p-3" id="home_icon_container1">
 
 
                     <div class="columns ml-2 p-0" style="flex-direction: column;">
@@ -797,7 +747,8 @@
                 </div>
             </div>
 
-            <div class="column is-two-thirds-fullhd has-text-centered p-5">
+            <div class="column is-two-thirds-fullhd has-text-centered p-5"
+                 id="home_icon_container2">
 
                 <div class="icon-container has-text-centered p-5" id="icon-container">
                     <div class="icon" id="icon1">
@@ -1025,38 +976,38 @@
     });
 </script>
 
-  <script>
+<script>
     const container = document.getElementById('icon-container');
     const icons = document.querySelectorAll('.icon');
 
     function getRandomTransform() {
-      const randomX = Math.floor(Math.random() * 400) - 200; // Random value between -200 and 200
-      const randomY = Math.floor(Math.random() * 400) - 200;
-      const randomZ = Math.floor(Math.random() * 300) - 150;
-      return `translate3d(${randomX}px, ${randomY}px, ${randomZ}px)`; // Return the random transform value
+        const randomX = Math.floor(Math.random() * 400) - 200; // Random value between -200 and 200
+        const randomY = Math.floor(Math.random() * 400) - 200;
+        const randomZ = Math.floor(Math.random() * 300) - 150;
+        return `translate3d(${randomX}px, ${randomY}px, ${randomZ}px)`; // Return the random transform value
     }
 
     // Set random transform on each icon before observing
     icons.forEach(icon => {
-      icon.style.transform = getRandomTransform(); // Assign random starting position
+        icon.style.transform = getRandomTransform(); // Assign random starting position
     });
 
     // Create observer for the entire container and log when triggered
     const icon_observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log("Container is in view"); // Log when observer triggers
-          container.classList.add('visible'); // Make the icons visible and move to position
-          icons.forEach(icon => {
-            icon.style.transform = "translate3d(0, 0, 0)"; // Move icons back to original position
-          });
-        }
-      });
-    }, { threshold: 0.65 }); // Trigger observer when 50% of the container is visible
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log("Container is in view"); // Log when observer triggers
+                container.classList.add('visible'); // Make the icons visible and move to position
+                icons.forEach(icon => {
+                    icon.style.transform = "translate3d(0, 0, 0)"; // Move icons back to original position
+                });
+            }
+        });
+    }, {threshold: 0.75}); // Trigger observer when 50% of the container is visible
 
     icon_observer.observe(container); // Apply observer to the container
 
-  </script>
+</script>
 
 </body>
 </html>

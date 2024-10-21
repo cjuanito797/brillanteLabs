@@ -6,6 +6,23 @@
 
 }
 
+/* Media query to collapse the two columns at 800 px override bulma default */
+@media (max-width: 800px) {
+
+
+    .columns {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 3%;
+    }
+
+    .column {
+        width: 100% !important;
+    }
+
+}
+
 /*removes default margin & padding*/
 html, body {
     padding: 0px !important;
@@ -502,22 +519,71 @@ h1 {
     }
 }
 
-    .icon-container {
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px;
-    }
+.icon-container {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
 
-    .icon {
-      width: 150px;
-      height: 150px;
-      opacity: 0; /* Initially hidden */
-      transform: translate3d(-200px, 0, 0); /* Start out of view */
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Smooth transition */
-    }
+.icon {
+    width: 150px;
+    height: 150px;
+    opacity: 0; /* Initially hidden */
+    transform: translate3d(-200px, 0, 0); /* Start out of view */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Smooth transition */
+}
 
-    .visible .icon {
-      opacity: 1;
-      transform: translate3d(0, 0, 0); /* Move icons into view */
-    }
+.visible .icon {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); /* Move icons into view */
+}
+
+/* Set black background for the body */
+
+
+/* Container for the progress circles */
+.progress-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+/* Background circle */
+.bg {
+    fill: none;
+    stroke: #2a2a2a; /* Darker gray for background circle */
+    stroke-width: 30; /* Thicker background stroke */
+}
+
+/* Circular progress path with vibrant gradient */
+.circular-progress {
+    fill: none;
+    stroke: url(#gradient); /* Use gradient for the stroke */
+    stroke-width: 30; /* Thicker progress stroke */
+    stroke-linecap: round;
+    stroke-dasharray: 628; /* Circumference of the circle (2 * Math.PI * r) */
+    stroke-dashoffset: 628;
+    filter: url(#strongGlow); /* Apply stronger glow effect */
+    transform: rotate(-90deg);
+    transform-origin: 150px 150px; /* Adjust origin based on new size */
+}
+
+/* End indicator circle */
+.end-indicator {
+    fill: #00f; /* Blue for the end indicator */
+    filter: url(#strongGlow); /* Apply stronger glow effect */
+}
+
+/* Progress text in the center */
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px; /* Larger font size */
+    font-weight: bold;
+    color: white; /* White text for visibility */
+    font-family: Charter;
+}
