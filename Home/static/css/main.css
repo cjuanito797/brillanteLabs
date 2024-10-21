@@ -3,13 +3,10 @@
     src: url("../fonts/HeavyBoxing-Regular.otf") format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /* Media query to collapse the two columns at 800 px override bulma default */
 @media (max-width: 800px) {
-
-
     .columns {
         flex-direction: column;
         display: flex;
@@ -20,7 +17,6 @@
     .column {
         width: 100% !important;
     }
-
 }
 
 /*removes default margin & padding*/
@@ -31,7 +27,6 @@ html, body {
     overflow-y: auto;
     scroll-behavior: smooth !important;
     background: rgba(0, 0, 0, 1)
-
 }
 
 #cursive-heading {
@@ -71,7 +66,6 @@ input[type="text"]::placeholder {
 }
 
 input[type="tel"]::placeholder {
-
     /* Firefox, Chrome, Opera */
     color: white;
     font-weight: bold;
@@ -88,7 +82,6 @@ footer {
 #cursor {
     color: red;
     animation: blink 1s linear infinite;
-
 }
 
 @keyframes blink {
@@ -372,7 +365,6 @@ footer {
 #messageText {
     font-family: "Charter";
     animation: 2s textFade;
-
 }
 
 #messageButton {
@@ -420,7 +412,6 @@ footer {
     width: 25%;
     left: 0px;
     bottom: 0px;
-
 }
 
 
@@ -446,7 +437,6 @@ footer {
 
 .navbar-item:hover {
     background: none !important;
-
 }
 
 .navbar-item:hover::after {
@@ -494,7 +484,6 @@ footer {
     height: 2px;
     width: 50%;
     left: 25%;
-
 }
 
 li {
@@ -505,7 +494,6 @@ li {
 
 p {
     font-family: Charter;
-
 }
 
 h1 {
@@ -541,7 +529,6 @@ h1 {
 
 /* Set black background for the body */
 
-
 /* Container for the progress circles */
 .progress-container {
     position: relative;
@@ -561,7 +548,7 @@ h1 {
 .circular-progress {
     fill: none;
     stroke: url(#gradient); /* Use gradient for the stroke */
-    stroke-width: 30; /* Thicker progress stroke */
+    stroke-width: 40; /* Thicker progress stroke */
     stroke-linecap: round;
     stroke-dasharray: 628; /* Circumference of the circle (2 * Math.PI * r) */
     stroke-dashoffset: 628;
