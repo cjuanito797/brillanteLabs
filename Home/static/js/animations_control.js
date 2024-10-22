@@ -5,28 +5,7 @@ const about_me_image = document.querySelector("#about_me_image");
 //const service_cards = document.querySelector("#service_cards");
 
 // Intersection observer for the about me summary.
-function about_me_func(entries) {
 
-    if (!entries[0].isIntersecting) {
-        return;
-    } else {
-        about_me_image.classList.add('active');
-        setTimeout(() => {
-            about_me_stats.classList.add('active');
-        }, 2500);
-
-        setTimeout(() => {
-            quote_obs.observe(quote);
-        }, 4000);
-    }
-}
-
-const about_me_options = {
-    threshold: 0.75,
-}
-
-const about_me_obs = new IntersectionObserver(about_me_func, about_me_options);
-about_me_obs.observe(about_me_image);
 
 // Intersection observer for the quote.
 function quote_func(entries) {
@@ -44,7 +23,7 @@ const quote_options = {
 }
 
 const quote_obs = new IntersectionObserver(quote_func, quote_options);
-
+quote_obs.observe(quote);
 
 // Intersection observer for the testimonial section.
 function testimonial_rdc_func(entries) {

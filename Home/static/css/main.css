@@ -314,11 +314,11 @@ footer {
 }
 
 #about_me_image {
+    transform: scale(0);
     opacity: 0;
 }
 
 #about_me_image.active {
-    animation: zoomInImage 2250ms linear;
     opacity: 1;
 }
 
