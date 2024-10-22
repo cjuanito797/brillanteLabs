@@ -404,6 +404,10 @@ footer {
     animation: projectsFade 1500ms ease-in;
 }
 
+#service-card {
+    transition: box-shadow 1s ease-in-out;
+}
+
 #horizontal-line {
     content: '';
     position: relative;
