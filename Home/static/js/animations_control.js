@@ -226,12 +226,7 @@ let service_card_observer = new IntersectionObserver(
                 let shadowClass =
                     entry.target.getAttribute("data-shadow");
                 entry.target.classList.add(shadowClass);
-            } else {
-                // Remove the box-shadow when the element is out of view
-                let shadowClass =
-                    entry.target.getAttribute("data-shadow");
-                entry.target.classList.remove(shadowClass);
-            }
+            } 
         });
     },
     {threshold: 0.9}, // Trigger when 90% of the column is in view
