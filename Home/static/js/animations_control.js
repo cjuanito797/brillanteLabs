@@ -90,7 +90,7 @@ let card_observer = new IntersectionObserver(
             }
         });
     },
-    {threshold: window.innerWidth >= 768 ? 0.85 : 0.85},
+    {threshold: window.innerWidth >= 768 ? 0.85 : 1.00},
     // 85% threshold for mobile, 85% for desktop
 );
 // Observe each column
