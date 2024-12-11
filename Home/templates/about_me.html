@@ -4,7 +4,7 @@
 
 {% block mainbody %}
 
-<div id="top_padding" style="margin-top: 10vh;">
+<div id="top_padding" style="margin-top: 15vh;">
 </div>
 
 
@@ -16,21 +16,24 @@
         <div class="column m-5 p-5">
 
             <div class="hr" style="width: 35%; border: 2px solid
-                                #9F8B3B;"></div>
+                                red;"></div>
             <h1 class="is-size-3-fullhd is-size-4-tablet is-size-4-mobile title has-text-white
-            has-text-weight-bold mt-5 pt-5">Nice
-                To Meet You! I am<br/>Juan Lizarraga-Cortez</h1>
+            has-text-weight-bold mt-5 pt-5">Meet Juan<br/>Your <span style="color: red;">KO
+            </span> Web
+                Developer & Designer.</h1>
 
 
-            <p class="text has-text-white mb-5 pb-5">I was born in Omaha, NE and raised
-                in Council Bluffs, IA where I am currently based out of. I attended the
-                University of Nebraska where in 2022 I received my bachelors of
-                Computer Science. Outside my work I enjoy all sorts of activities,
-                from being in the outdoors on a long run to peacefully watching a film.
+            <p class="text has-text-white mb-5 pb-5" style="font-weight: bold;">Designing &
+                Developing KO Web
+                Experiences
+                is the mission of KO'de By Juan. Each project that we do is a unique creative
+                endeavor. In my free time, I find it crucially important to recharge my
+                creative batteries. Whether that be with watching films or pursuing other
+                creative hobbies.
             </p>
 
             <div class="hr" style="width: 100%; border: 1px solid
-                                #9F8B3B; opacity: 0.55;"></div>
+                                blue; opacity: 0.55;"></div>
 
 
         </div>
@@ -38,50 +41,13 @@
 
         <div class="column has-text-centered">
 
-            <img src="{% static 'me.jpg' %}" style="border-radius: 50%;" width="550"
+            <img src="{% static 'about_me-3.png' %}" style="border-radius: 50%;" width="550"
                  height="550">
 
         </div>
 
     </div>
 
-    <div class="columns is-flex-fullhd p-5 is-align-items-center
-    has-text-centered-mobile">
-
-        <div style="margin-left: 5%;" class="is-hidden-mobile"></div>
-
-
-        <div class="column is-full is-flex-tablet p-5 m-5 has-text-centered">
-
-            <div
-                    class="is-full is-flex is-align-items-center pt-3 mt-1 is-justify-content-center">
-                <h1 class="has-text-white is-size-2 has-text-weight-bold">3</h1>
-                <h1 class="is-size-3 has-text-weight-bold ml-2" style="color: #9F8B3B;">
-                    +</h1>
-                <h1 class="title is-size-4 has-text-white
-            has-text-weight-bold ">Years of
-                    <br/>experience</h1>
-            </div>
-
-            <div class="spacing ml-5 pl-5 is-hidden-mobile"></div>
-
-            <div
-                    class="is-full is-flex is-align-items-center pt-3 mt-1 is-justify-content-center">
-                <h1 class="has-text-white is-size-2 has-text-weight-bold">3</h1>
-                <h1 class="is-size-3 has-text-weight-bold ml-2" style="color: #9F8B3B;">
-                    +</h1>
-                <h1 class="title is-size-4
-                    has-text-white
-            has-text-weight-bold ">Projects
-                    <br/>completed</h1>
-            </div>
-
-        </div>
-
-        <div class="column  p-0 m-0">
-
-        </div>
-    </div>
 
 
 </section>
@@ -340,6 +306,6 @@
 
 {% block javascript %}
 
-    <script src="{% static 'js/navbar_change.js' %}"></script>
+<script src="{% static 'js/navbar_change.js' %}"></script>
 
 {% endblock %}

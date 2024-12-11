@@ -90,8 +90,8 @@ let card_observer = new IntersectionObserver(
             }
         });
     },
-    {threshold: window.innerWidth >= 768 ? 0.85 : 1.00},
-    // 85% threshold for mobile, 85% for desktop
+    {threshold: window.innerWidth >= 768 ? 1.00 : 1.00},
+    // do a 100%
 );
 // Observe each column
 columns.forEach((column) => {
